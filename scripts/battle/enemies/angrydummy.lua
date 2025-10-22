@@ -52,7 +52,7 @@ function AngryDummy:init()
     -- Register party act with Ralsei called "Tell Story"
     -- (second argument is description, usually empty)
     self:registerAct("Tell Story", "", {"ralsei"})
-    self:registerAct("Hack In 100% Mercy", "dirty hacker", {"suzy", "ralsei"})
+    self:registerAct("Hack In 100% Mercy", "dirty hacker", {"susie", "ralsei"})
 end
 
 function AngryDummy:onAct(battler, name)
