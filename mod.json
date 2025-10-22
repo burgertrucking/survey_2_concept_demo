@@ -7,7 +7,7 @@
     "subtitle": "",
 
     // The version of your mod.
-    "version": "v1.0.0",
+    "version": "v0.0.1",
     // What version of the engine your mod was made with.
     "engineVer": "v0.10.0-dev",
 
@@ -20,7 +20,7 @@
     "map": "room1",
 
     // The party. The first character is the player.
-    "party": ["kris", "susie", "ralsei"],
+    "party": ["frisk", "suzy", "ralsei"],
 
     // The inventory. Contains three darkburgers, a cell phone and a shadow crystal by default.
     "inventory": {
@@ -30,17 +30,17 @@
 
     // Equipment for your party. Not specifying equipment defaults to the following.
     "equipment": {
-        "kris": {
+        "frisk": {
             "weapon": "wood_blade",
-            "armor": ["amber_card", "amber_card"]
+            "armor": []
         },
-        "susie": {
+        "suzy": {
             "weapon": "mane_ax",
-            "armor": ["amber_card", "amber_card"]
+            "armor": []
         },
         "ralsei": {
             "weapon": "red_scarf",
-            "armor": ["amber_card", "amber_card"]
+            "armor": []
         }
     },
 
