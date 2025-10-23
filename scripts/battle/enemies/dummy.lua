@@ -71,7 +71,7 @@ function Dummy:onAct(battler, name)
             enemy:setTired(true)
         end
         local ralseiname = Game:getPartyMember("ralsei").name
-        return "* You and " .. ralseiname .. " told the dummya bedtime story.\n* The enemies became [color:blue]TIRED[color:reset]..."
+        return "* You and " .. ralseiname .. " told the dummy a bedtime story.\n* The enemies became [color:blue]TIRED[color:reset]..."
 
     elseif name == "Standard" then --X-Action
         -- Give the enemy 50% mercy
