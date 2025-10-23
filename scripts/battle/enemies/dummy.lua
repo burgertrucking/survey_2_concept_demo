@@ -70,14 +70,16 @@ function Dummy:onAct(battler, name)
             -- Make the enemy tired
             enemy:setTired(true)
         end
-        return "* You and Ralsei told the dummy\na bedtime story.\n* The enemies became [color:blue]TIRED[color:reset]..."
+        local ralseiname = Game:getPartyMember("ralsei").name
+        return "* You and " .. ralseiname .. " told the dummya bedtime story.\n* The enemies became [color:blue]TIRED[color:reset]..."
 
     elseif name == "Standard" then --X-Action
         -- Give the enemy 50% mercy
         self:addMercy(50)
         if battler.chara.id == "ralsei" then
             -- R-Action text
-            return "* Ralsei bowed politely.\n* The dummy spiritually bowed\nin return."
+            local ralseiname = Game:getPartyMember("ralsei").name
+            return "* " .. ralseiname .. " bowed politely.\n* The dummy spiritually bowed\nin return."
         elseif battler.chara.id == "susie" then
             -- S-Action: start a cutscene (see scripts/battle/cutscenes/dummy.lua)
             Game.battle:startActCutscene("dummy", "susie_punch")

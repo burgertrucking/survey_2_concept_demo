@@ -25,14 +25,14 @@ function AngryDummy:init()
     self.waves = {
         "basicbuthard",
         "aimingbuthard",
-        "movingarena"
+        "movingarenabuthard"
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
     self.dialogue = {
         "I HATE YOU",
         "YOU ARE AN IDIOT",
-        "YOU SHOULD KYS\n(know you suck) NOW",
+        "YOU SHOULD KYS\n(know you suck)\nNOW",
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
@@ -45,20 +45,20 @@ function AngryDummy:init()
         "* Smells like your ass when it gets thrashed.",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* The dummy looks like it's\nabout to fall over.\n* It still looks at you defiantly."
+    self.low_health_text = "* The dummy looks like it's\nabout to fall over.\n* It still glares at you defiantly."
 
     -- Register act called "Smile"
     self:registerAct("Smile")
     -- Register party act with Ralsei called "Tell Story"
     -- (second argument is description, usually empty)
     self:registerAct("Tell Story", "", {"ralsei"})
-    self:registerAct("Hack In 100% Mercy", "dirty hacker", {"susie", "ralsei"})
+    self:registerAct("Hack In 100% Mercy", "dirty haxor", {"susie", "ralsei"})
 end
 
 function AngryDummy:onAct(battler, name)
     if name == "Smile" then
-        -- Remove mercy?
-        self:addMercy(-10)
+        -- REMOVE mercy
+        self:addMercy(-50)
         -- Change this enemy's dialogue for 1 turn
         self.dialogue_override = "SHUT UP YOU FOOL"
         -- Act text (since it's a list, multiple textboxes)
@@ -74,22 +74,8 @@ function AngryDummy:onAct(battler, name)
             enemy:setTired(true)
             enemy.dialogue_override = "OH NO MY ONLY WEAKNESS\nCRAPPY STORYTELLING"
         end
-        return "* You and Ralsei told the dummy\na bedtime story.\n* The enemies became [color:blue]TIRED[color:reset]..."
-
-    elseif name == "Standard" then --X-Action
-        -- Give the enemy 50% mercy
-        self:addMercy(50)
-        if battler.chara.id == "ralsei" then
-            -- R-Action text
-            return "* Ralsei bowed politely.\n* The dummy spiritually bowed\nin return."
-        elseif battler.chara.id == "susie" then
-            -- S-Action: start a cutscene (see scripts/battle/cutscenes/dummy.lua)
-            Game.battle:startActCutscene("dummy", "susie_punch")
-            return
-        else
-            -- Text for any other character (like Noelle)
-            return "* "..battler.chara:getName().." straightened the\ndummy's hat."
-        end
+        local ralseiname = Game:getPartyMember("ralsei").name
+        return "* You and " .. ralseiname .. " told the dummy a bedtime story.\n* The enemies became [color:blue]TIRED[color:reset]..."
 
     elseif name == "Hack In 100% Mercy" then
         self:addMercy(100)
