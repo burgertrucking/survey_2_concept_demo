@@ -3,7 +3,8 @@ local character, super = HookSystem.hookScript("kris")
 
 function character:init()
     super.init(self)
-    self.name = "Frisk"
+    local fun = Game:getFlag("fun", nil)
+    if fun ~= 6 then self.name = "Frisk" end
     self.name_sprite = nil
 end
 
