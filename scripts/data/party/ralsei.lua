@@ -1,4 +1,3 @@
--- Testing custom naming for Ralsei
 local character, super = HookSystem.hookScript("ralsei")
 
 function character:init()
