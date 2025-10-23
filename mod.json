@@ -114,7 +114,7 @@
             // Whether pushing a block should freeze the player
             "pushBlockInputLock": false,
             // Whether TP should be kept after battle instead of reset
-            "keepTensionAfterBattle": false,
+            "keepTensionAfterBattle": true,
             // Whether spells should be usable in the overworld
             "overworldSpells": true,
             // If disabled, negative enemy damage heals the enemy

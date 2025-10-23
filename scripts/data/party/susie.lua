@@ -4,7 +4,7 @@ local character, super = HookSystem.hookScript("susie")
 function character:init()
     super.init(self)
     self.name = "Suzy"
-    self.name_sprite = "party/susie/name-suzy"
+    self.name_sprite = nil
 end
 
 return character
