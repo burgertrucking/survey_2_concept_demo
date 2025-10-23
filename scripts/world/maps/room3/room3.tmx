@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="11" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="40">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="11" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="41">
  <editorsettings>
-  <export target="room3.lua" format="lua"/>
+  <export target="data.lua" format="lua"/>
  </editorsettings>
  <properties>
+  <property name="light" type="bool" value="true"/>
   <property name="name" value="A custom map"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/castle.tsx"/>
+ <tileset firstgid="1" source="../../tilesets/castle.tsx"/>
  <layer id="1" name="tiles" width="16" height="11">
   <data encoding="csv">
 0,22,13,23,23,13,23,23,23,13,23,23,13,24,0,0,
@@ -56,9 +57,18 @@
   <object id="37" name="npc" x="136" y="211" width="40" height="40">
    <properties>
     <property name="actor" value="starwalker"/>
-    <property name="text1">* This [color:yellow]copypasted room[color:reset]
+    <property name="text1">* This [color:yellow]fake light world[color:reset]
 is [color:yellow]Pissing[color:reset] me off...</property>
     <property name="text2" value="* I'm the original   [color:yellow]Starwalker[color:reset]"/>
+   </properties>
+  </object>
+  <object id="40" name="savepoint" x="278.835" y="299.194" width="40" height="40">
+   <properties>
+    <property name="text1">* The fact that there's a save
+point in the Light World really
+bothers you.</property>
+    <property name="text2">* The power of inconsistency
+shines within you.</property>
    </properties>
   </object>
  </objectgroup>

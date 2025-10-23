@@ -10,16 +10,17 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 40,
+  nextobjectid = 41,
   properties = {
+    ["light"] = true,
     ["name"] = "A custom map"
   },
   tilesets = {
     {
       name = "castle",
       firstgid = 1,
-      filename = "../tilesets/castle.tsx",
-      exportfilename = "../tilesets/castle.lua"
+      filename = "../../tilesets/castle.tsx",
+      exportfilename = "../../tilesets/castle.lua"
     }
   },
   layers = {
@@ -235,8 +236,24 @@ return {
           visible = true,
           properties = {
             ["actor"] = "starwalker",
-            ["text1"] = "* This [color:yellow]copypasted room[color:reset]\nis [color:yellow]Pissing[color:reset] me off...",
+            ["text1"] = "* This [color:yellow]fake light world[color:reset]\nis [color:yellow]Pissing[color:reset] me off...",
             ["text2"] = "* I'm the original   [color:yellow]Starwalker[color:reset]"
+          }
+        },
+        {
+          id = 40,
+          name = "savepoint",
+          type = "",
+          shape = "rectangle",
+          x = 278.835,
+          y = 299.194,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text1"] = "* The fact that there's a save\npoint in the Light World really\nbothers you.",
+            ["text2"] = "* The power of inconsistency\nshines within you."
           }
         }
       }
