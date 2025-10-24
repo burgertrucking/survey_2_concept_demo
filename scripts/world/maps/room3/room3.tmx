@@ -5,7 +5,7 @@
  </editorsettings>
  <properties>
   <property name="light" type="bool" value="true"/>
-  <property name="name" value="A custom map"/>
+  <property name="name" value="The &quot;&quot;&quot;Light World&quot;&quot;&quot;"/>
  </properties>
  <tileset firstgid="1" source="../../tilesets/castle.tsx"/>
  <layer id="1" name="tiles" width="16" height="11">

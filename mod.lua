@@ -35,5 +35,5 @@ function Mod:setRalseiName(name)
     Game:setFlag("ralsei_name", name)
     rname = Game:getFlag("ralsei_name", nil) -- confirm it saved
     env.print("Saved Ralsei's name as " .. rname)
-    renameRalsei(name)
+    Mod:renameRalsei(name)
 end

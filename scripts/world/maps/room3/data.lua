@@ -13,7 +13,7 @@ return {
   nextobjectid = 41,
   properties = {
     ["light"] = true,
-    ["name"] = "A custom map"
+    ["name"] = "The \"\"\"Light World\"\"\""
   },
   tilesets = {
     {
