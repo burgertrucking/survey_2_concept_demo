@@ -37,3 +37,11 @@ function Mod:setRalseiName(name)
     env.print("Saved Ralsei's name as " .. rname)
     Mod:renameRalsei(name)
 end
+
+function Mod:playLegend(cutscene, music)
+    local legend = Registry.getLegendCutscene(cutscene)
+    local opts = {
+        ["music"] = music
+    }
+    Game:fadeIntoLegend(legend, opts)
+end
