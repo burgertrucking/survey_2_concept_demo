@@ -39,6 +39,8 @@ function Mod:setRalseiName(name)
 end
 
 function Mod:playLegend(cutscene, music)
+    cutscene = cutscene or "legend"
+    music = music or "legend"
     local legend = Registry.getLegendCutscene(cutscene)
     local opts = {
         ["music"] = music
