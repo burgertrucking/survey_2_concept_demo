@@ -1,4 +1,4 @@
-From 5c6ea2446c9cf7f79907aea1ec02171ad8266cd1 Mon Sep 17 00:00:00 2001
+From f22eaa6798e47831e58e4d2fd1856f23126dd0f1 Mon Sep 17 00:00:00 2001
 From: burgertrucking <225804275+burgertrucking@users.noreply.github.com>
 Date: Sat, 25 Oct 2025 22:44:53 -0700
 Subject: [PATCH] kristal engine changes for SURVEY_2
@@ -17,8 +17,8 @@ I'm sorry I genoslided your branding Kristal devs :(
  src/engine/menu/mainmenutitle.lua      |  13 +++-----
  src/engine/menu/objects/filenamer.lua  |  15 +++++----
  src/engine/vendcust.lua                |   2 +-
- src/kristal.lua                        |   2 +-
- 13 files changed, 42 insertions(+), 62 deletions(-)
+ src/kristal.lua                        |   4 +--
+ 13 files changed, 42 insertions(+), 64 deletions(-)
 
 diff --git a/.gitignore b/.gitignore
 index 02638126..fd8090e7 100644
@@ -591,10 +591,19 @@ index 861ad9a7..8f41bc7a 100644
  -- Disables Kristal's built-in Main menu and \
  -- immediately loads the target mod.
 diff --git a/src/kristal.lua b/src/kristal.lua
-index 675b36ed..a6ff5985 100644
+index 675b36ed..17bbfb90 100644
 --- a/src/kristal.lua
 +++ b/src/kristal.lua
-@@ -1648,7 +1648,7 @@ end
+@@ -1558,8 +1558,6 @@ end
+ function Kristal.processDynamicBorder()
+     if Kristal.getState() == Game then
+         return Game:getBorder()
+-    elseif Kristal.getState() == MainMenu then
+-        return ImageBorder("castle")
+     end
+ end
+ 
+@@ -1648,7 +1646,7 @@ end
  function Kristal.loadConfig()
      local config = {
          windowScale = 1,
