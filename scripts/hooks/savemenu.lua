@@ -88,7 +88,7 @@ function SaveMenu:draw()
             local w = 478
 
             -- Header
-            love.graphics.print(mcname, x + (w/2) - self.font:getWidth(mcname)/2, y)
+            love.graphics.print(data.name, x + (w/2) - self.font:getWidth(data.name)/2, y)
             love.graphics.print("LV "..data.level, x, y)
 
             local minutes = math.floor(data.playtime / 60)

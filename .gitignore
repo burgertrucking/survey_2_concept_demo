@@ -1,2 +1,5 @@
 .vscode/
 *.tiled-session
+
+*.swp
+tags

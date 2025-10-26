@@ -2,7 +2,7 @@
     // The ID of your mod. Should be unique!!
     "id": "survey_2_concept_demo",
     // Displays on the main menu.
-    "name": "SURVEY_PROGRAM_202X CONCEPT",
+    "name": "SURVEY_PROGRAM_202X - CONCEPT DEMO",
     // Displays underneath the name. Optional.
     "subtitle": "",
 
@@ -64,7 +64,7 @@
             // Extra 48-slot item storage
             "enableStorage": true,
             // Enable recruit messages and menu
-            "enableRecruits": true,
+            "enableRecruits": false,
             // Whether the recruits progress in the menu will have spaces between the amounts
             "recruitsProgressSpaces": true,
             // Single-file save menu with no storage/recruits options
