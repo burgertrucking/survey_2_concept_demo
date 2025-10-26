@@ -1,0 +1,608 @@
+From 5c6ea2446c9cf7f79907aea1ec02171ad8266cd1 Mon Sep 17 00:00:00 2001
+From: burgertrucking <225804275+burgertrucking@users.noreply.github.com>
+Date: Sat, 25 Oct 2025 22:44:53 -0700
+Subject: [PATCH] kristal engine changes for SURVEY_2
+
+I'm sorry I genoslided your branding Kristal devs :(
+---
+ .gitignore                             |   5 ++-
+ bigicon.png                            | Bin 2567 -> 779 bytes
+ icon.ico                               | Bin 18077 -> 51262 bytes
+ icon.png                               | Bin 735 -> 779 bytes
+ src/engine/loadstate.lua               |   1 -
+ src/engine/menu/mainmenu.lua           |  19 +++---------
+ src/engine/menu/mainmenufilename.lua   |   5 ---
+ src/engine/menu/mainmenufileselect.lua |  41 ++++++++++++-------------
+ src/engine/menu/mainmenuoptions.lua    |   1 -
+ src/engine/menu/mainmenutitle.lua      |  13 +++-----
+ src/engine/menu/objects/filenamer.lua  |  15 +++++----
+ src/engine/vendcust.lua                |   2 +-
+ src/kristal.lua                        |   2 +-
+ 13 files changed, 42 insertions(+), 62 deletions(-)
+
+diff --git a/.gitignore b/.gitignore
+index 02638126..fd8090e7 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -8,4 +8,7 @@ mods/*
+ build/
+ output/
+ 
+-*.tiled-session
+\ No newline at end of file
++*.tiled-session
++
++*.swp
++tags
+diff --git a/bigicon.png b/bigicon.png
+index 711d23683a5cdbbe278aa13c119088bcb4a12e51..32fcb6723bcab6c4f270f9aa9c23a9abf290d054 100644
+GIT binary patch
+literal 779
+zcmeAS@N?(olHy`uVBq!ia0vp^4Is?H1|$#LC7xzrV7lb#;uumf=k1-?pu+|{t`BD<
+z=0_HXhtCt_Ih1Vu&+>V7o7&8K6I0Y*mU>Q7SyXiY`vvAbaqGXIIKTh>?w&t?&b+(+
+z-SE@lt#-@|=?o9-qU{x4H@^RVL9B9W&_5f8Y<}Cnzt%7murZutI1qZCVWWDQ?S?5E
+zPk*VG`F~qJ#rE@;*WEDbrN$1|gx$X%@G1Kfe{OqL?Ec?hQ;i!%K{_QFcE}qacxAgk
+z%;x^h*T3#<dVM;LNt<B~V}mh6!P)c7Z_>8Q+0TM0Es71lysQ3uZPVQ^|LS0-o4#kh
+z@@{MTfB)}a_Hx0s8auq+UAX-2{Qj!_);Fr}ALRmhf`=jIdu@YHu7A$k%C)u?UmtJX
+z!~}GL1v7*BpP2`iUq859e!V%&h{Nd(x6-d=q}_kL0jlV`<bCn}_mlhMrhl6!ShfCg
+z^!o2F<>uGM|Fdh@X9x<4yr1{kU)*i3wr{qmmc4%pYUiDP$%JqF4rJ_}o4>5=u6!gT
+z&>cVzM%T$JMCGzYzOBiE33;bC-2BaS^WNXfwiVxgZdvzR8RnSNZ<)XRJG=0j+@4!M
+zzofB(LWhlET@{<eUi}SG{c~#V_Fn%x5f)6(Y8!5T=khb&_1rxS<T;?vcircnVJqAN
+zG~(*}_tz1=u54JI-gLE2S!34S&v487?S*&z@+qh~-wz98-+KLoZ$1}pzp}N5>#b$$
+zNVE43$lg8=;iWvbj<DIBW$%B&-SRZO;l<0D54Io_-3BVEI?uBF`=1lA0QzR^5MnLt
+uf-F>M>@ejl%gy`q&p{M5sCWup5SPxg40!x(-yL8gXYh3Ob6Mw<&;$UCY+n5U
+
+literal 2567
+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
+E0wrr=?*IS*
+
+diff --git a/icon.ico b/icon.ico
+index 3a8ff5608ad32fb727e7c0f423255cbbc2209bd2..cd4d87124bfcdc00cd67700dc31b124ada264026 100644
+GIT binary patch
+literal 51262
+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
+
+literal 18077
+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
+H_t8HAXD0<f
+
+diff --git a/icon.png b/icon.png
+index 98e9504b0a4c93db69b763b1610095a809cfa74e..32fcb6723bcab6c4f270f9aa9c23a9abf290d054 100644
+GIT binary patch
+literal 779
+zcmeAS@N?(olHy`uVBq!ia0vp^4Is?H1|$#LC7xzrV7lb#;uumf=k1-?pu+|{t`BD<
+z=0_HXhtCt_Ih1Vu&+>V7o7&8K6I0Y*mU>Q7SyXiY`vvAbaqGXIIKTh>?w&t?&b+(+
+z-SE@lt#-@|=?o9-qU{x4H@^RVL9B9W&_5f8Y<}Cnzt%7murZutI1qZCVWWDQ?S?5E
+zPk*VG`F~qJ#rE@;*WEDbrN$1|gx$X%@G1Kfe{OqL?Ec?hQ;i!%K{_QFcE}qacxAgk
+z%;x^h*T3#<dVM;LNt<B~V}mh6!P)c7Z_>8Q+0TM0Es71lysQ3uZPVQ^|LS0-o4#kh
+z@@{MTfB)}a_Hx0s8auq+UAX-2{Qj!_);Fr}ALRmhf`=jIdu@YHu7A$k%C)u?UmtJX
+z!~}GL1v7*BpP2`iUq859e!V%&h{Nd(x6-d=q}_kL0jlV`<bCn}_mlhMrhl6!ShfCg
+z^!o2F<>uGM|Fdh@X9x<4yr1{kU)*i3wr{qmmc4%pYUiDP$%JqF4rJ_}o4>5=u6!gT
+z&>cVzM%T$JMCGzYzOBiE33;bC-2BaS^WNXfwiVxgZdvzR8RnSNZ<)XRJG=0j+@4!M
+zzofB(LWhlET@{<eUi}SG{c~#V_Fn%x5f)6(Y8!5T=khb&_1rxS<T;?vcircnVJqAN
+zG~(*}_tz1=u54JI-gLE2S!34S&v487?S*&z@+qh~-wz98-+KLoZ$1}pzp}N5>#b$$
+zNVE43$lg8=;iWvbj<DIBW$%B&-SRZO;l<0D54Io_-3BVEI?uBF`=1lA0QzR^5MnLt
+uf-F>M>@ejl%gy`q&p{M5sCWup5SPxg40!x(-yL8gXYh3Ob6Mw<&;$UCY+n5U
+
+literal 735
+zcmV<50wDc~P)<h;3K|Lk000e1NJLTq002M$002M;1^@s6s%dfF00001b5ch_0Itp)
+z=>Px#1ZP1_K>z@;j|==^1poj532;bRa{vGi!2kdb!2!6DYwZ940(414K~#8N?U_4P
+z!!Qs<l~gIS4@#iQrdSf2p`>IVl<q=Ck%Fv@H8c8IvV6}G4xdQ#-hAvs4l2ag^=e*e
+zPA^JLKjs^Z%OSj93SKNE%vg@*$|5NK4g@I+v>dEhL<Ve;d6}3pBTJo2N=ryf-T~tG
+zna+4DvkHJWW)r^>nD`KA3rIH!!0N+Fps{Rf2E-)p0KJC2u}B+)W<o;GTet>HpWjM-
+zyy;kU1@zqWme{tf-2z2sf>`|fD}2?l6g40=D<$!(y@&x;c#YOdH94yR5DcuIW=a+V
+ztZ<;Fcxm>r*cJ`oZte<iS^N_EIRIW@8&ZN?@imDRKa2Bne<TUEK<J=c8IS;HW)bfY
+zH3QrrYGgk}IEC1NQh_W{`aF>VTN4kk4X7y|&dPaSs7<v2)L~1%FVX)sjRwdHs1*>L
+zQ(HVB9)h_kEu5;-RSj4p<33LY^nPELGBW_ga|4SpswLr;W37PJ7QS@;qXHz^mjHXN
+zE#88~p$#Z0z6C;Y9AkQ!dJi1ff_RQLT>&|RZ6)hmvJJsjvQFX0`1Bk=ft6KnS$7c|
+z;M2NzD!wEGS{5G~fNtC(1Kdq}E_)ZY0i0V(YjBceKdweUusr?#|G2m8Pv_-N;$2u3
+z&|CH;@md4GE^Iw*)?x2sx*kh31iL8xTf!u91`X(~?_*$9KriB@*#}4iwwig1Xa=-S
+zOtN4Sav+}*YQw$H-w6KUrYax?t^tqxrng!Ei_2X>_6ji9Vc88Z*I^mn0CGw)$^M*>
+z>poAhw}82(V(+>B$^o{oyOP)|z+8uAH^5wnWq1RUrzn$@e;gEzaqtRI>JNOAj3+hx
+RukQc=002ovPDHLkV1nyvH9-IX
+
+diff --git a/src/engine/loadstate.lua b/src/engine/loadstate.lua
+index 256f3223..047657db 100644
+--- a/src/engine/loadstate.lua
++++ b/src/engine/loadstate.lua
+@@ -122,7 +122,6 @@ function Loading:draw()
+         love.graphics.push()
+         love.graphics.translate(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+         love.graphics.scale(2, 2)
+-        self:drawSprite(self.logo, 0, 0, 1)
+         love.graphics.pop()
+         return
+     end
+diff --git a/src/engine/menu/mainmenu.lua b/src/engine/menu/mainmenu.lua
+index a6650d4d..f3ebc9c4 100644
+--- a/src/engine/menu/mainmenu.lua
++++ b/src/engine/menu/mainmenu.lua
+@@ -22,7 +22,7 @@ end
+ 
+ function MainMenu:enter()
+     -- Load menu music
+-    self.music = Music() -- "mod_menu", 1, 0.95
++    self.music = Music() -- "AUDIO_DRONE", 1, 1
+ 
+     Kristal.showBorder(0.5)
+ 
+@@ -103,7 +103,7 @@ function MainMenu:enter()
+     end
+ 
+     if not self.music:isPlaying() then
+-        self.music:play("mod_menu", 1, 0.95)
++        self.music:play("AUDIO_DRONE", 1, 1)
+     end
+ 
+     if #Kristal.Mods.failed_mods > 0 then
+@@ -121,17 +121,6 @@ function MainMenu:enter()
+         instance = 1
+     })
+ 
+-    GitFinder:fetchLatestCommit(function(status, body, headers)
+-        local current_commit = GitFinder:fetchCurrentCommit()
+-        if current_commit ~= body then
+-            self.ver_string = "v" .. tostring(Kristal.Version)
+-            if trimmed_commit then
+-                self.ver_string = self.ver_string .. " (" .. trimmed_commit .. ")"
+-            end
+-            self.ver_string = self.ver_string .. " (outdated!)"
+-        end
+-    end)
+-
+     if TARGET_MOD then
+         self.selected_mod = self.mod_list:getSelectedMod()
+         self.selected_mod_button = self.mod_list:getSelectedButton()
+@@ -464,11 +453,11 @@ function MainMenu:drawVersion()
+             end
+         end
+     else
+-        local full_ver = "Kristal: " .. self.ver_string
++        local full_ver = "Made with Kristal " .. self.ver_string
+ 
+         if self.selected_mod.version then
+             ver_y = ver_y - self.small_font:getHeight()
+-            full_ver = self.selected_mod.name .. ": " .. self.selected_mod.version .. "\n" .. full_ver
++            full_ver = self.selected_mod.name .. " " .. self.selected_mod.version .. "\n" .. full_ver
+         end
+ 
+         love.graphics.setFont(self.small_font)
+diff --git a/src/engine/menu/mainmenufilename.lua b/src/engine/menu/mainmenufilename.lua
+index 7a8ff9b2..f0b16665 100644
+--- a/src/engine/menu/mainmenufilename.lua
++++ b/src/engine/menu/mainmenufilename.lua
+@@ -63,9 +63,4 @@ function MainMenuFileName:onLeave(new_state)
+     self.menu.heart.visible = true
+ end
+ 
+-function MainMenuFileName:draw()
+-    local mod_name = string.upper(self.menu.selected_mod.name or self.menu.selected_mod.id)
+-    Draw.printShadow(mod_name, 16, 8)
+-end
+-
+ return MainMenuFileName
+diff --git a/src/engine/menu/mainmenufileselect.lua b/src/engine/menu/mainmenufileselect.lua
+index df4f395d..a0a71309 100644
+--- a/src/engine/menu/mainmenufileselect.lua
++++ b/src/engine/menu/mainmenufileselect.lua
+@@ -128,7 +128,7 @@ function MainMenuFileSelect:onKeyPressed(key, is_repeat)
+                 if button.selected_choice == 1 and self.erase_stage == 1 then
+                     Assets.stopAndPlaySound("ui_select")
+                     button:setColor(1, 0, 0)
+-                    button:setChoices({ "Yes!", "No!" }, "Really erase it?")
++                    button:setChoices({ "ERASE", "DO NOT" }, "THEN IT WILL BE DESTROYED.")
+                     self.erase_stage = 2
+                 else
+                     local result
+@@ -136,7 +136,7 @@ function MainMenuFileSelect:onKeyPressed(key, is_repeat)
+                         Assets.stopAndPlaySound("ui_spooky_action")
+                         Kristal.eraseData("file_" .. button.id, self.mod.id)
+                         button:setData(nil)
+-                        result = "Erase complete."
++                        result = "IT IS AS IF IT WAS NEVER THERE AT ALL."
+                     else
+                         Assets.stopAndPlaySound("ui_select")
+                     end
+@@ -157,7 +157,7 @@ function MainMenuFileSelect:onKeyPressed(key, is_repeat)
+                     Kristal.saveData("file_" .. button.id, data, self.mod.id)
+                     button:setData(data)
+                     button:setChoices()
+-                    self:setState("SELECT", "Copy complete.")
++                    self:setState("SELECT", "IT CONFORMED TO THE REFLECTION.")
+                     self.copied_button:setColor(1, 1, 1)
+                     self.copied_button = nil
+                     self.focused_button = nil
+@@ -196,9 +196,9 @@ function MainMenuFileSelect:onKeyPressed(key, is_repeat)
+             if self.selected_y <= 3 then
+                 self.focused_button = self:getSelectedFile()
+                 if self.focused_button.data then
+-                    self.focused_button:setChoices({ "Continue", "Back" })
++                    self.focused_button:setChoices({ "CONTINUE", "BACK" })
+                 else
+-                    self.focused_button:setChoices({ "Start", "Back" })
++                    self.focused_button:setChoices({ "BEGIN", "BACK" })
+                 end
+             elseif self.selected_y == 4 then
+                 if self.selected_x == 1 then
+@@ -269,23 +269,23 @@ function MainMenuFileSelect:onKeyPressed(key, is_repeat)
+                         self:updateSelected()
+                     else
+                         Assets.stopAndPlaySound("ui_cancel")
+-                        self:setResultText("It can't be copied.")
++                        self:setResultText("IT IS BARREN AND CANNOT BE COPIED.")
+                     end
+                 else
+                     local selected = self:getSelectedFile()
+                     if selected == self.copied_button then
+                         Assets.stopAndPlaySound("ui_cancel")
+-                        self:setResultText("You can't copy there.")
++                        self:setResultText("IT IS IMMUNE TO ITS OWN IMAGE.")
+                     elseif selected.data then
+                         Assets.stopAndPlaySound("ui_select")
+                         self.focused_button = selected
+-                        self.focused_button:setChoices({ "Yes", "No" }, "Copy over this file?")
++                        self.focused_button:setChoices({ "OVERWRITE", "DO NOT" }, "IT WILL BE SUBSUMED.")
+                     else
+                         Assets.stopAndPlaySound("ui_spooky_action")
+                         local data = Kristal.loadData("file_" .. self.copied_button.id, self.mod.id)
+                         Kristal.saveData("file_" .. selected.id, data, self.mod.id)
+                         selected:setData(data)
+-                        self:setState("SELECT", "Copy complete.")
++                        self:setState("SELECT", "IT CONFORMED TO THE REFLECTION.")
+                         self.copied_button:setColor(1, 1, 1)
+                         self.copied_button = nil
+                         self.selected_x = 1
+@@ -329,7 +329,7 @@ function MainMenuFileSelect:onKeyPressed(key, is_repeat)
+                 local button = self:getSelectedFile()
+                 if button.data then
+                     self.focused_button = button
+-                    self.focused_button:setChoices({ "Yes", "No" }, "Erase this file?")
++                    self.focused_button:setChoices({ "YES", "NO" }, "TRULY ERASE IT?")
+                     Assets.stopAndPlaySound("ui_select")
+                 else
+                     self:setResultText("There's nothing to erase.")
+@@ -372,9 +372,6 @@ function MainMenuFileSelect:update()
+ end
+ 
+ function MainMenuFileSelect:draw()
+-    local mod_name = string.upper(self.mod.name or self.mod.id)
+-    Draw.printShadow(mod_name, 16, 8)
+-
+     Draw.printShadow(self:getTitle(), 80, 60)
+ 
+     local function setColor(x, y)
+@@ -387,14 +384,14 @@ function MainMenuFileSelect:draw()
+ 
+     if self.state == "SELECT" or self.state == "TRANSITIONING" then
+         setColor(1, 4)
+-        Draw.printShadow("Copy", 108, 380)
++        Draw.printShadow("COPY", 108, 380)
+         setColor(2, 4)
+-        Draw.printShadow("Erase", 280, 380)
++        Draw.printShadow("ERASE", 280, 380)
+         setColor(3, 4)
+-        Draw.printShadow("Back", 468, 380)
++        Draw.printShadow("BACK", 468, 380)
+     else
+         setColor(1, 4)
+-        Draw.printShadow("Cancel", 110, 380)
++        Draw.printShadow("CANCEL", 110, 380)
+     end
+ 
+     Draw.setColor(1, 1, 1)
+@@ -409,17 +406,17 @@ function MainMenuFileSelect:getTitle()
+         return self.result_text
+     end
+     if self.state == "SELECT" or self.state == "TRANSITIONING" then
+-        return "Please select a file."
++        return "SELECT A FILE."
+     else
+         if self.state == "ERASE" then
+-            return "Choose a file to erase."
++            return "SELECT THE ONE TO ERASE."
+         elseif self.state == "COPY" then
+             if not self.copied_button then
+-                return "Choose a file to copy."
++                return "CHOOSE THE ONE TO COPY."
+             elseif not self.focused_button then
+-                return "Choose a file to copy to."
++                return "CHOOSE THE TARGET FOR THE REFLECTION."
+             else
+-                return "The file will be overwritten."
++                return "IT WILL BE SUBSUMED."
+             end
+         end
+     end
+diff --git a/src/engine/menu/mainmenuoptions.lua b/src/engine/menu/mainmenuoptions.lua
+index cd9a94e3..54cd704e 100644
+--- a/src/engine/menu/mainmenuoptions.lua
++++ b/src/engine/menu/mainmenuoptions.lua
+@@ -604,7 +604,6 @@ function MainMenuOptions:initializeOptions()
+     -- Engine Options
+     ---------------------
+ 
+-    self:registerConfigOption("engine", "Skip Intro", "skipIntro")
+     self:registerConfigOption("engine", "Display FPS", "showFPS")
+ 
+     self:registerOption("engine", "Default Name", function ()
+diff --git a/src/engine/menu/mainmenutitle.lua b/src/engine/menu/mainmenutitle.lua
+index e377c527..a9b5d74f 100644
+--- a/src/engine/menu/mainmenutitle.lua
++++ b/src/engine/menu/mainmenutitle.lua
+@@ -34,10 +34,9 @@ function MainMenuTitle:onEnter(old_state)
+ 
+     if TARGET_MOD then
+         self.options = {
+-            {"play",    self.has_target_saves and "Load game" or "Start game"},
+-            {"options", "Options"},
+-            {"credits", "Credits"},
+-            {"quit",    "Quit"},
++            {"play",    "BEGIN PROGRAM"},
++            {"options", "CONFIGURATION"},
++            {"quit",    "END PROGRAM"},
+         }
+     else
+         self.options = {
+@@ -71,12 +70,8 @@ function MainMenuTitle:onKeyPressed(key, is_repeat)
+ 				if MainMenu.mod_list:getSelectedMod() and MainMenu.mod_list:getSelectedMod().soulColor then
+ 					MainMenu.heart.color = MainMenu.mod_list:getSelectedMod().soulColor
+ 				end
+-            elseif self.has_target_saves then
+-                self.menu:setState("FILESELECT")
+             else
+-                if not Kristal.loadMod(TARGET_MOD, 1) then
+-                    error("Failed to load mod: " .. TARGET_MOD)
+-                end
++                self.menu:setState("FILESELECT")
+             end
+ 
+         elseif option == "modfolder" then
+diff --git a/src/engine/menu/objects/filenamer.lua b/src/engine/menu/objects/filenamer.lua
+index 6613ac01..3ebab8f4 100644
+--- a/src/engine/menu/objects/filenamer.lua
++++ b/src/engine/menu/objects/filenamer.lua
+@@ -18,8 +18,8 @@ function FileNamer:init(options)
+ 
+     local mod = options.mod or {}
+ 
+-    self.name_text    = options.name_text    or mod["nameText"]    or "ENTER YOUR OWN NAME."
+-    self.confirm_text = options.confirm_text or mod["confirmText"] or "THIS IS YOUR NAME."
++    self.name_text    = options.name_text    or mod["nameText"]    or "NAME THE FILE."
++    self.confirm_text = options.confirm_text or mod["confirmText"] or "YOU GRANT IT THIS NAME."
+ 
+     if options.goner_style ~= false then
+         self.name_text    = "[style:GONER][spacing:3.2]" .. self.name_text
+@@ -33,7 +33,7 @@ function FileNamer:init(options)
+     self.deny_names    = options.deny_names    or mod["namesDeny"]     or {}
+     self.name_messages = options.name_messages or mod["namesMessages"] or {}
+     
+-    self.keyboard_mode = options.keyboard_mode or mod["keyboardMode"] or "default"
++    self.keyboard_mode = options.keyboard_mode or mod["keyboardMode"] or "lowercase"
+ 
+     self.callback = options.on_confirm
+     self.cancel_callback = options.on_cancel
+@@ -104,7 +104,7 @@ function FileNamer:setState(state)
+             self:setState("CONFIRM")
+         end, function(key, x, y, namer)
+             for k,v in pairs(self.crash_names) do
+-                if namer.text .. key == v then
++                if string.upper(namer.text .. key) == v then
+                     love.audio.stop()
+                     self.stage.timescale = 0
+                     for _,child in ipairs(self.stage.children) do
+@@ -123,8 +123,11 @@ function FileNamer:setState(state)
+     elseif state == "CONFIRM" then
+         local confirm_text = self.confirm_text
+         for k,v in pairs(self.name_messages) do
+-            if k == self.name then
++            if k == string.upper(self.name) then
+                 confirm_text = v
++                if self.goner_style then
++                    confirm_text = "[style:GONER][spacing:3.2]" .. confirm_text
++                end
+             end
+         end
+         self.text:setText(confirm_text)
+@@ -135,7 +138,7 @@ function FileNamer:setState(state)
+         self.name_zoom = 0
+         local allow = true
+         for k,v in pairs(self.deny_names) do
+-            if v == self.name then
++            if v == string.upper(self.name) then
+                 allow = false
+             end
+         end
+diff --git a/src/engine/vendcust.lua b/src/engine/vendcust.lua
+index 861ad9a7..8f41bc7a 100644
+--- a/src/engine/vendcust.lua
++++ b/src/engine/vendcust.lua
+@@ -8,7 +8,7 @@
+ -- Also set if command parameter `--mod <id>` is passed to the engine. \
+ -- (The value set here overrides that)
+ ---@type string
+-TARGET_MOD = nil
++TARGET_MOD = "survey_2_concept_demo"
+ 
+ -- Disables Kristal's built-in Main menu and \
+ -- immediately loads the target mod.
+diff --git a/src/kristal.lua b/src/kristal.lua
+index 675b36ed..a6ff5985 100644
+--- a/src/kristal.lua
++++ b/src/kristal.lua
+@@ -1648,7 +1648,7 @@ end
+ function Kristal.loadConfig()
+     local config = {
+         windowScale = 1,
+-        skipIntro = false,
++        skipIntro = true,
+         showFPS = false,
+         fps = 30,
+         vSync = false,
+-- 
+2.51.0.windows.2
+
