@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="11" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="41">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="11" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="44">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -57,9 +57,7 @@
   <object id="37" name="npc" x="136" y="211" width="40" height="40">
    <properties>
     <property name="actor" value="starwalker"/>
-    <property name="text1">* This [color:yellow]fake light world[color:reset]
-is [color:yellow]Pissing[color:reset] me off...</property>
-    <property name="text2" value="* I'm the original   [color:yellow]Starwalker[color:reset]"/>
+    <property name="cutscene" value="room3.starwalkerconvo"/>
    </properties>
   </object>
   <object id="40" name="savepoint" x="278.835" y="299.194" width="40" height="40">
@@ -70,6 +68,12 @@ bothers you.</property>
     <property name="text2">* The power of inconsistency
 shines within you.</property>
    </properties>
+  </object>
+  <object id="42" name="chest" x="430.277" y="195.797">
+   <properties>
+    <property name="item" value="light/ball_of_junk"/>
+   </properties>
+   <point/>
   </object>
  </objectgroup>
  <objectgroup color="#7f00ff" id="5" name="markers">

@@ -33,7 +33,7 @@ end
 
 function Mod:setRalseiName(name)
     Game:setFlag("ralsei_name", name)
-    rname = Game:getFlag("ralsei_name", nil) -- confirm it saved
+    local rname = Game:getFlag("ralsei_name", nil) -- confirm it saved
     env.print("Saved Ralsei's name as " .. rname)
     Mod:renameRalsei(name)
 end
@@ -46,4 +46,8 @@ function Mod:playLegend(cutscene, music)
         ["music"] = music
     }
     Game:fadeIntoLegend(legend, opts)
+end
+
+function Mod:registerTestCall()
+    Game.world:registerCall("Unknown Caller", "calls.testcall")
 end

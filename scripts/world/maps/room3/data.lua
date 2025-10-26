@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 41,
+  nextobjectid = 44,
   properties = {
     ["light"] = true,
     ["name"] = "The \"\"\"Light World\"\"\""
@@ -236,8 +236,7 @@ return {
           visible = true,
           properties = {
             ["actor"] = "starwalker",
-            ["text1"] = "* This [color:yellow]fake light world[color:reset]\nis [color:yellow]Pissing[color:reset] me off...",
-            ["text2"] = "* I'm the original   [color:yellow]Starwalker[color:reset]"
+            ["cutscene"] = "room3.starwalkerconvo"
           }
         },
         {
@@ -254,6 +253,21 @@ return {
           properties = {
             ["text1"] = "* The fact that there's a save\npoint in the Light World really\nbothers you.",
             ["text2"] = "* The power of inconsistency\nshines within you."
+          }
+        },
+        {
+          id = 42,
+          name = "chest",
+          type = "",
+          shape = "point",
+          x = 430.277,
+          y = 195.797,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["item"] = "light/ball_of_junk"
           }
         }
       }
