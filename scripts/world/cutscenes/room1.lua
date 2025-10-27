@@ -73,6 +73,7 @@ return {
     end,
 
     ---@param cutscene WorldCutscene
+    ---@param event Event
     ralseijoin = function(cutscene, event)
         local ralsei = cutscene:getCharacter("ralsei")
         cutscene:setSpeaker(ralsei)

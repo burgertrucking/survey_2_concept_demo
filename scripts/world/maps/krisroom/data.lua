@@ -331,7 +331,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["cutscene"] = "krisroom.asrieldesk"
+            ["cutscene"] = "krisroom.asrieldesk",
+            ["sprite"] = "world/events/krisroom/asrieldesk"
           }
         },
         {

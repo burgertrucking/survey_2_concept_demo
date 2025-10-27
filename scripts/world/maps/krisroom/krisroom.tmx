@@ -71,6 +71,7 @@
   <object id="22" name="interactable" x="84" y="366" width="96.8" height="40">
    <properties>
     <property name="cutscene" value="krisroom.asrieldesk"/>
+    <property name="sprite" value="world/events/krisroom/asrieldesk"/>
    </properties>
   </object>
   <object id="23" name="interactable" x="464.373" y="343.755" width="56" height="40">

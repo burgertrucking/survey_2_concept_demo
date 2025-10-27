@@ -55,7 +55,12 @@ return {
     ---@param cutscene WorldCutscene
     test2 = function(cutscene)
         intro(cutscene)
-        cutscene:text("* These spam calls are   [color:yellow]Pissing[color:reset] me off...")
-        outro(cutscene)
+        local num = Game.world:getCellFlag("calls.test2", 0)
+        if num <= 0 then
+            cutscene:text("* These spam calls are   [color:yellow]Pissing[color:reset] me off...")
+            outro(cutscene)
+        else
+            cutscene:text("* (But nobody came.)")
+        end
     end
 }
