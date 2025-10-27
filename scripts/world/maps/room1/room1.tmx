@@ -4,6 +4,7 @@
   <export target="data.lua" format="lua"/>
  </editorsettings>
  <properties>
+  <property name="music" value="mod_menu"/>
   <property name="name" value="Test Map - Room 1"/>
  </properties>
  <tileset firstgid="1" source="../../tilesets/castle.tsx"/>

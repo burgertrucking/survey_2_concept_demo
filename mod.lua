@@ -54,6 +54,7 @@ function Mod:setRalseiName(name)
     Mod:renameChara("ralsei", name)
 end
 
+--- NOTE: Seems to autoplay most recently played song upon cutscene end, must manually stop in returning cutscene
 ---@param cutscene?     string      ID of the legend cutscene to play (default "legend")
 ---@param music?        string      ID of the song to play in the background (default "legend")
 function Mod:playLegend(cutscene, music)

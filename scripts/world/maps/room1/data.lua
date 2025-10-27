@@ -12,6 +12,7 @@ return {
   nextlayerid = 6,
   nextobjectid = 42,
   properties = {
+    ["music"] = "mod_menu",
     ["name"] = "Test Map - Room 1"
   },
   tilesets = {
