@@ -271,8 +271,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (Your clothes dresser.)",
-            ["text2"] = "* (It's full of those green hand-me-down sweaters you never liked.)"
+            ["cutscene"] = "krisroom.krisdresser"
           }
         },
         {
@@ -317,7 +316,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (The sun's rays illuminate your room.)"
+            ["cutscene"] = "krisroom.window"
           }
         },
         {
@@ -347,7 +346,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* (It's seen its fair share of crashes.)"
+            ["cutscene"] = "krisroom.redwagon"
           }
         }
       }

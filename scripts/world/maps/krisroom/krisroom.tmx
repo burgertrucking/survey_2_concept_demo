@@ -50,8 +50,7 @@
   </object>
   <object id="17" name="interactable" x="391.849" y="199.273" width="56" height="40">
    <properties>
-    <property name="text1" value="* (Your clothes dresser.)"/>
-    <property name="text2" value="* (It's full of those green hand-me-down sweaters you never liked.)"/>
+    <property name="cutscene" value="krisroom.krisdresser"/>
    </properties>
   </object>
   <object id="18" name="interactable" x="470" y="216" width="82" height="78">
@@ -66,7 +65,7 @@
   </object>
   <object id="20" name="interactable" x="296" y="160" width="66" height="38">
    <properties>
-    <property name="text1" value="* (The sun's rays illuminate your room.)"/>
+    <property name="cutscene" value="krisroom.window"/>
    </properties>
   </object>
   <object id="22" name="interactable" x="84" y="366" width="96.8" height="40">
@@ -76,7 +75,7 @@
   </object>
   <object id="23" name="interactable" x="464.373" y="343.755" width="56" height="40">
    <properties>
-    <property name="text1" value="* (It's seen its fair share of crashes.)"/>
+    <property name="cutscene" value="krisroom.redwagon"/>
    </properties>
   </object>
  </objectgroup>
