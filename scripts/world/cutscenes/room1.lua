@@ -82,9 +82,17 @@ return {
             cutscene:text("* ...Join you? Sounds great!", "smile_b")
             cutscene:text("* I need a name, though.", "neutral")
 
-            -- DEBUG
-            cutscene:setSpeaker()
-            cutscene:text("(this is the part where the keyboard comes up)")
+            -- yanked nigh wholesale from testmod's "testing.goner_choice" cutscene
+            local chosen_name
+            local namer = GonerKeyboard(6, "lowercase",
+                function (name)
+                    chosen_name = name
+                end
+            )
+            Game.stage:addChild(namer)
+            cutscene:wait(function () return chosen_name ~= nil end)
+
+            Mod:setRalseiName(chosen_name)
 
             cutscene:setSpeaker(ralsei)
             cutscene:text("* " .. ralsei:getPartyMember().name .. ", huh? I like it!", "smile_b")
