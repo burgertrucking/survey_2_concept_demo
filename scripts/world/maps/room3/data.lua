@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 44,
+  nextobjectid = 47,
   properties = {
     ["light"] = true,
     ["name"] = "The \"\"\"Light World\"\"\""
@@ -43,8 +43,8 @@ return {
       encoding = "lua",
       data = {
         0, 22, 13, 23, 23, 13, 23, 23, 23, 13, 23, 23, 13, 24, 0, 0,
-        0, 22, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 24, 0, 0,
-        0, 26, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 27, 28, 0, 0,
+        0, 22, 23, 23, 23, 23, 23, 9, 23, 23, 23, 23, 23, 24, 0, 0,
+        0, 26, 27, 27, 27, 27, 27, 13, 27, 27, 27, 27, 27, 28, 0, 0,
         0, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 0, 0,
         0, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 0, 0,
         0, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 7, 7,
@@ -107,7 +107,7 @@ return {
           shape = "rectangle",
           x = 40,
           y = 80,
-          width = 520,
+          width = 238,
           height = 40,
           rotation = 0,
           visible = true,
@@ -190,6 +190,19 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 45,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 321.667,
+          y = 80.6667,
+          width = 238,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -269,6 +282,22 @@ return {
           properties = {
             ["item"] = "light/ball_of_junk"
           }
+        },
+        {
+          id = 44,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 280,
+          y = 56.6667,
+          width = 40,
+          height = 64,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "krisroom",
+            ["marker"] = "entry"
+          }
         }
       }
     },
@@ -301,11 +330,24 @@ return {
         },
         {
           id = 30,
-          name = "entry",
+          name = "entryA",
           type = "",
           shape = "point",
           x = 525,
           y = 254,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 46,
+          name = "entryB",
+          type = "",
+          shape = "point",
+          x = 299.333,
+          y = 146.667,
           width = 0,
           height = 0,
           rotation = 0,
