@@ -19,44 +19,43 @@ function Mod:load(savedata, cleansave, fileslot)
 end
 
 function Mod:postInit(cleansave)
-    if cleansave then env.print("Starting from a fresh save file") end
+    if cleansave then
+        env.print("Starting from a fresh save file")
+        Mod:genFunValues()
+        -- need to rename Kris and Susie if their corresponding un/fun values are 6 (otherwise names will be defaults)
+        if Game:getFlag("fun") == 6 then Mod:renameChara("kris", "Kris") end
+        if Game:getFlag("unfun") == 6 then Mod:renameChara("susie", "Susie") end
+    end
+
+    Mod:registerTestCalls() -- DEBUG
 end
 
 
 -- the rest are utility functions that i'm not sure where else to put
-function Mod:generateFunValues()
+function Mod:genFunValues()
     local fun = Utils.random(1, 40, 1)
     local unfun = Utils.random(1, 40, 1)
     Game:setFlag("fun", fun)
     Game:setFlag("unfun", unfun)
 end
 
-function Mod:printFunValues()
-    local fun = Game:getFlag("fun", nil)
-    local unfun = Game:getFlag("unfun", nil)
-    env.print("Fun: " .. fun .. " Unfun: " .. unfun)
-end
-
-function Mod:setFun(val)
-    Game:setFlag("fun", val)
-end
-
-function Mod:setUnfun(val)
-    Game:setFlag("unfun", val)
-end
-
-function Mod:renameRalsei(name)
-    local ralsei = Game:getPartyMember("ralsei")
-    ralsei.name = name
+--- contrary to what the name may suggest, Chara is not in this game, this function just renames a party member
+---@param   chara   string  ID of the character to rename
+---@param   name    string  Desired new name
+function Mod:renameChara(chara, name)
+    local pm = Game:getPartyMember(chara)
+    pm.name = name
 end
 
 function Mod:setRalseiName(name)
     Game:setFlag("ralsei_name", name)
     local rname = Game:getFlag("ralsei_name", nil) -- confirm it saved
     env.print("Saved Ralsei's name as " .. rname)
-    Mod:renameRalsei(name)
+    Mod:renameChara("ralsei", name)
 end
 
+---@param cutscene?     string      ID of the legend cutscene to play (default "legend")
+---@param music?        string      ID of the song to play in the background (default "legend")
 function Mod:playLegend(cutscene, music)
     cutscene = cutscene or "legend"
     music = music or "legend"
