@@ -1,10 +1,29 @@
 -- DEBUG: Storing a reference to Kristal's Console so all prints log directly there
 local env = Kristal.Console.env
 
+
+-- called internally by Kristal on mod load, in this order
+function Mod:preInit()
+    env.print("Called Mod:preInit()")
+end
+
 function Mod:init()
     env.print("Loaded "..self.info.name.."!")
 end
 
+---@param savedata?     table       Data from the savefile json
+---@param cleansave?    boolean     Is true if the selected save slot was empty
+---@param fileslot?     number      The file slot number being loaded (1-3)
+function Mod:load(savedata, cleansave, fileslot)
+    env.print("Called Mod:load()")
+end
+
+function Mod:postInit(cleansave)
+    if cleansave then env.print("Starting from a fresh save file") end
+end
+
+
+-- the rest are utility functions that i'm not sure where else to put
 function Mod:generateFunValues()
     local fun = Utils.random(1, 40, 1)
     local unfun = Utils.random(1, 40, 1)
