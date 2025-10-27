@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 12,
+  nextobjectid = 24,
   properties = {
     ["light"] = true
   },
@@ -159,6 +159,58 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 12,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 190,
+          y = 200,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 13,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 380,
+          y = 200,
+          width = 80,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 14,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 80,
+          y = 200,
+          width = 100,
+          height = 100,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 15,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 464,
+          y = 202,
+          width = 100,
+          height = 100,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -190,6 +242,112 @@ return {
           properties = {
             ["map"] = "room3",
             ["marker"] = "entryB"
+          }
+        },
+        {
+          id = 16,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 202,
+          y = 198,
+          width = 56,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "krisroom.asrieldresser"
+          }
+        },
+        {
+          id = 17,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 391.849,
+          y = 199.273,
+          width = 56,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text1"] = "* (Your clothes dresser.)",
+            ["text2"] = "* (It's full of those green hand-me-down sweaters you never liked.)"
+          }
+        },
+        {
+          id = 18,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 470,
+          y = 216,
+          width = 82,
+          height = 78,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "krisroom.krisbed"
+          }
+        },
+        {
+          id = 19,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 84,
+          y = 196,
+          width = 88,
+          height = 104,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "krisroom.asrielbed"
+          }
+        },
+        {
+          id = 20,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 296,
+          y = 160,
+          width = 66,
+          height = 38,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text1"] = "* (The sun's rays illuminate your room.)"
+          }
+        },
+        {
+          id = 22,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 84,
+          y = 366,
+          width = 96.8,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "krisroom.asrieldesk"
+          }
+        },
+        {
+          id = 23,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 464.373,
+          y = 343.755,
+          width = 56,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["text1"] = "* (It's seen its fair share of crashes.)"
           }
         }
       }

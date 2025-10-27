@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="12">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="24">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -31,12 +31,52 @@
   <object id="6" x="370" y="400" width="200" height="40"/>
   <object id="7" x="252" y="440" width="40" height="40"/>
   <object id="8" x="370" y="438" width="40" height="40"/>
+  <object id="12" x="190" y="200" width="80" height="40"/>
+  <object id="13" x="380" y="200" width="80" height="40"/>
+  <object id="14" x="80" y="200" width="100" height="100"/>
+  <object id="15" x="464" y="202" width="100" height="100"/>
  </objectgroup>
  <objectgroup color="#ff00ff" id="4" name="objects">
   <object id="10" name="transition" x="310" y="460" width="40" height="40">
    <properties>
     <property name="map" value="room3"/>
     <property name="marker" value="entryB"/>
+   </properties>
+  </object>
+  <object id="16" name="interactable" x="202" y="198" width="56" height="40">
+   <properties>
+    <property name="cutscene" value="krisroom.asrieldresser"/>
+   </properties>
+  </object>
+  <object id="17" name="interactable" x="391.849" y="199.273" width="56" height="40">
+   <properties>
+    <property name="text1" value="* (Your clothes dresser.)"/>
+    <property name="text2" value="* (It's full of those green hand-me-down sweaters you never liked.)"/>
+   </properties>
+  </object>
+  <object id="18" name="interactable" x="470" y="216" width="82" height="78">
+   <properties>
+    <property name="cutscene" value="krisroom.krisbed"/>
+   </properties>
+  </object>
+  <object id="19" name="interactable" x="84" y="196" width="88" height="104">
+   <properties>
+    <property name="cutscene" value="krisroom.asrielbed"/>
+   </properties>
+  </object>
+  <object id="20" name="interactable" x="296" y="160" width="66" height="38">
+   <properties>
+    <property name="text1" value="* (The sun's rays illuminate your room.)"/>
+   </properties>
+  </object>
+  <object id="22" name="interactable" x="84" y="366" width="96.8" height="40">
+   <properties>
+    <property name="cutscene" value="krisroom.asrieldesk"/>
+   </properties>
+  </object>
+  <object id="23" name="interactable" x="464.373" y="343.755" width="56" height="40">
+   <properties>
+    <property name="text1" value="* (It's seen its fair share of crashes.)"/>
    </properties>
   </object>
  </objectgroup>

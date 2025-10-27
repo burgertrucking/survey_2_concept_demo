@@ -536,7 +536,7 @@ return {
           visible = true,
           properties = {
             ["map"] = "room3",
-            ["marker"] = "entry"
+            ["marker"] = "entryA"
           }
         },
         {

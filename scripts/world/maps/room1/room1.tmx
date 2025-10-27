@@ -133,7 +133,7 @@ no-good wall slammers.</property>
   <object id="39" name="transition" x="0" y="200" width="40" height="80">
    <properties>
     <property name="map" value="room3"/>
-    <property name="marker" value="entry"/>
+    <property name="marker" value="entryA"/>
    </properties>
   </object>
   <object id="41" name="npc" x="455.86" y="158.316">
