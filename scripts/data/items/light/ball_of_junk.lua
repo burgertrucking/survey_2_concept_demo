@@ -23,7 +23,7 @@ function item:onToss()
             Assets.playSound("bageldefeat")
             cutscene:text("* Hand shaking,[wait:5] you dropped the\nball of junk on the ground.")
             cutscene:text("* It broke into pieces.")
-            cutscene:text("* You felt the bitter tinge of\nregret.")
+            cutscene:text("* You felt a bitter pang of regret.")
         else
             cutscene:text("* You breathed a sigh of relief.")
         end

@@ -40,7 +40,8 @@ function Choicebox:update()
         end
     -- Press the B button, stupid!
     elseif Input.pressed("cancel") then
-        -- NOTE completely untested in battle
+        -- NOTE a side effect of doing this is the next textbox is automatically skipped to the end
+        -- NOTE this is completely untested in battle
         self.selected_choice = 0
         self.done = true
         cleanup()

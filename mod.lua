@@ -48,6 +48,7 @@ function Mod:playLegend(cutscene, music)
     Game:fadeIntoLegend(legend, opts)
 end
 
-function Mod:registerTestCall()
-    Game.world:registerCall("Unknown Caller", "calls.testcall")
+function Mod:registerTestCalls()
+    Game.world:registerCall("Unknown Caller", "calls.test1")
+    Game.world:registerCall("Mysterious Caller", "calls.test2")
 end
