@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 41,
+  nextobjectid = 42,
   properties = {
     ["name"] = "Test Map - Room 1"
   },
@@ -536,6 +536,24 @@ return {
           properties = {
             ["map"] = "room3",
             ["marker"] = "entry"
+          }
+        },
+        {
+          id = 41,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 455.86,
+          y = 158.316,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "ralsei",
+            ["cutscene"] = "room1.ralseijoin",
+            ["flagcheck"] = "!joined",
+            ["turn"] = true
           }
         }
       }

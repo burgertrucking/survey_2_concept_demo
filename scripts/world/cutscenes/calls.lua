@@ -1,8 +1,16 @@
+local function intro(cutscene)
+    cutscene:playSound("phone", 1)
+    cutscene:text("* (Ring,[wait:5] ring...)")
+end
+
+local function outro(cutscene)
+    cutscene:text("* (Click...)")
+end
+
 return {
     ---@param cutscene WorldCutscene
-    test1 = function(cutscene, event)
-        cutscene:playSound("phone", 1)
-        cutscene:text("* (Ring,[wait:5] ring...)")
+    test1 = function(cutscene)
+        intro(cutscene)
         cutscene:text("* Hello.[wait:10] Thank you for calling Michaelsoft Bimbows tech support.")
         cutscene:text("* My name is... er...[wait:5] Robert.[wait:10]\n* Yes, this is the Robert.\n* How may I help you today?")
         local sel = cutscene:choicer({"Shut up\nscammer", "I want\na pizza", "Help me fix my complooter"}, {["wait"]=true})
@@ -41,13 +49,13 @@ return {
             end
             cutscene:text("* (You got bored of messing with the scammer and decided to hang up.)")
         end
-
-        cutscene:text("* (Click...)")
+        outro(cutscene)
     end,
 
-    test2 = function(cutscene, event)
-        cutscene:playSound("phone", 1)
-        cutscene:text("* (Ring,[wait:5] ring...)")
+    ---@param cutscene WorldCutscene
+    test2 = function(cutscene)
+        intro(cutscene)
         cutscene:text("* These spam calls are   [color:yellow]Pissing[color:reset] me off...")
+        outro(cutscene)
     end
 }

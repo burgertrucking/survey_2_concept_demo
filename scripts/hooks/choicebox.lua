@@ -1,4 +1,5 @@
 -- You can now press Cancel on a choicebox, and the choicer will return 0 when you do
+-- NOTE: Text choiceboxes don't have this option (this would mean you can't skip the scrolling text part)
 local Choicebox, super = HookSystem.hookScript(Choicebox)
 
 function Choicebox:update()
@@ -39,7 +40,7 @@ function Choicebox:update()
             cleanup()
         end
     -- Press the B button, stupid!
-    elseif Input.pressed("cancel") then
+    elseif Input.pressed("cancel", false) then
         -- NOTE a side effect of doing this is the next textbox is automatically skipped to the end
         -- NOTE this is completely untested in battle
         self.selected_choice = 0

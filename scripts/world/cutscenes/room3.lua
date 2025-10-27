@@ -1,6 +1,6 @@
 return {
     ---@param cutscene WorldCutscene
-    starwalkerconvo = function(cutscene, event)
+    starwalkerconvo = function(cutscene)
         cutscene:text("* This [color:yellow]fake light world[color:reset]\nis [color:yellow]Pissing[color:reset] me off...")
         cutscene:text("* I'm the original   [color:yellow]Starwalker[color:reset]")
 

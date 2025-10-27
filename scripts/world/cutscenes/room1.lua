@@ -70,5 +70,31 @@ return {
             cutscene:attachFollowers()
             Game:setFlag("wall_hit", true)
         end
+    end,
+
+    ---@param cutscene WorldCutscene
+    ralseijoin = function(cutscene, event)
+        local ralsei = cutscene:getCharacter("ralsei")
+        cutscene:setSpeaker(ralsei)
+        cutscene:text("* Hey.", "smile")
+        local sel = cutscene:textChoicer("* Ask him to join?", {"YES!", "No he sucks"})
+        if sel == 1 then
+            cutscene:text("* ...Join you? Sounds great!", "smile_b")
+            cutscene:text("* I need a name, though.", "neutral")
+
+            -- DEBUG
+            cutscene:setSpeaker()
+            cutscene:text("(this is the part where the keyboard comes up)")
+
+            cutscene:setSpeaker(ralsei)
+            cutscene:text("* " .. ralsei:getPartyMember().name .. ", huh? I like it!", "smile_b")
+            cutscene:text("* Let's go, " .. Game:getPartyMember("kris").name .. "!", "smile")
+            ralsei:convertToFollower()
+            Game:addPartyMember(ralsei:getPartyMember())
+            cutscene:interpolateFollowers()
+            event:setFlag("joined", true)
+        elseif sel == 2 then
+            cutscene:text("", "sad")
+        end
     end
 }
