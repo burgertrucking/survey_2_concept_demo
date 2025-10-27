@@ -130,5 +130,4 @@ function LightSaveMenu:draw()
     end
 end
 
-
 return LightSaveMenu
