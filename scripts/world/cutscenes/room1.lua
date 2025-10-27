@@ -77,10 +77,13 @@ return {
         local ralsei = cutscene:getCharacter("ralsei")
         cutscene:setSpeaker(ralsei)
         cutscene:text("* Hey.", "smile")
+        cutscene:setSpeaker()
         local sel = cutscene:textChoicer("* Ask him to join?", {"YES!", "No he sucks"})
+        cutscene:setSpeaker(ralsei)
         if sel == 1 then
             cutscene:text("* ...Join you? Sounds great!", "smile_b")
             cutscene:text("* I need a name, though.", "neutral")
+            Game.world:transitionMusic("menu_options_uty")
 
             -- yanked nigh wholesale from testmod's "testing.goner_choice" cutscene
             local chosen_name
@@ -89,16 +92,23 @@ return {
                     chosen_name = name
                 end
             )
+            namer.text = "Ralsei"
             Game.stage:addChild(namer)
             cutscene:wait(function () return chosen_name ~= nil end)
 
             Mod:setRalseiName(chosen_name)
+            Game.world.music:stop()
 
             cutscene:setSpeaker(ralsei)
             cutscene:text("* " .. ralsei:getPartyMember().name .. ", huh? I like it!", "smile_b")
             cutscene:text("* Let's go, " .. Game:getPartyMember("kris").name .. "!", "smile")
+
+            Game.world:transitionMusic(Game.world.map.music)
+
             ralsei:convertToFollower()
-            Game:addPartyMember(ralsei:getPartyMember())
+            rparty = ralsei:getPartyMember()
+            rparty:setWeapon("red_scarf")
+            Game:addPartyMember(rparty)
             cutscene:interpolateFollowers()
             event:setFlag("joined", true)
         elseif sel == 2 then
