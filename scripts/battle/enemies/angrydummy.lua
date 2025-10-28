@@ -18,8 +18,11 @@ function AngryDummy:init()
     -- Enemy reward
     self.money = 100
 
-    -- Mercy given when sparing this enemy before its spareable (20% for basic enemies)
-    self.spare_points = 20
+    -- Mercy given when sparing this enemy before its spareable (-10% for this asshole)
+    self.spare_points = -10
+
+    -- This enemy will never get tired
+    self.tired_percentage = 0.0
 
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
@@ -40,12 +43,15 @@ function AngryDummy:init()
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
-        "* The dummy stares daggers at you.",
+        "* The dummy stares daggers at you.\n* Thankfully, it can't throw daggers.",
         "* The power of fluffy boys can't\nsave you from this catastrophe.",
         "* Smells like your ass when it gets thrashed.",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
     self.low_health_text = "* The dummy looks like it's\nabout to fall over.\n* It still glares at you defiantly."
+
+    -- Make this text only show at very low health percentages (<=15%)
+    self.low_health_percentage = 0.15
 
     -- Register act called "Smile"
     self:registerAct("Smile")

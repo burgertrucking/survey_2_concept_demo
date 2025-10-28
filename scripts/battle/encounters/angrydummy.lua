@@ -6,8 +6,8 @@ function AngryDummy:init()
     -- Text displayed at the bottom of the screen at the start of the encounter
     self.text = "* The dummy is angry!\n* And it brought friends!"
 
-    -- Battle music ("battle_boss" is ruder buster)
-    self.music = "battle_boss"
+    -- Battle music ("rudebuster_boss" is ruder buster)
+    self.music = "rudebuster_boss"
     -- Enables the purple grid battle background
     self.background = true
 
