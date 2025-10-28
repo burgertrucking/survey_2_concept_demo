@@ -56,13 +56,18 @@ return {
 
     ---@param cutscene WorldCutscene
     krisdresser = function(cutscene)
-        cutscene:text("* (Your clothes dresser.)")
-        cutscene:text("* (It's full of those green, striped hand-me-downs.)")
+        cutscene:text("* (It's your clothes dresser.)")
+        cutscene:text("* (It's full of green, striped hand-me-downs.)")
     end,
 
     ---@param cutscene WorldCutscene
     redwagon = function(cutscene)
+        cutscene:text("* (A wagon with a bird cage in it.)")
         cutscene:text("* (It's almost as if it looks more damaged every time you see it.)")
+    end,
+
+    stain = function(cutscene)
+        cutscene:text("* (The stain refuses to come off.)")
     end,
 
     ---@param cutscene WorldCutscene

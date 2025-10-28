@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 24,
+  nextobjectid = 30,
   properties = {
     ["light"] = true
   },
@@ -211,6 +211,19 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        },
+        {
+          id = 25,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 82,
+          y = 364,
+          width = 107.087,
+          height = 42.4948,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },
@@ -340,14 +353,75 @@ return {
           name = "interactable",
           type = "",
           shape = "rectangle",
-          x = 464.373,
-          y = 343.755,
-          width = 56,
+          x = 476.838,
+          y = 347.155,
+          width = 66.1988,
           height = 40,
           rotation = 0,
           visible = true,
           properties = {
-            ["cutscene"] = "krisroom.redwagon"
+            ["cutscene"] = "krisroom.redwagon",
+            ["solid"] = true
+          }
+        },
+        {
+          id = 24,
+          name = "sprite",
+          type = "",
+          shape = "point",
+          x = 82,
+          y = 336,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/krisroom/asrieldesk"
+          }
+        },
+        {
+          id = 26,
+          name = "sprite",
+          type = "",
+          shape = "point",
+          x = 470,
+          y = 330,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/krisroom/redwagon"
+          }
+        },
+        {
+          id = 28,
+          name = "sprite",
+          type = "",
+          shape = "point",
+          x = 464,
+          y = 200,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["texture"] = "world/krisroom/bedsheet/untucked"
+          }
+        },
+        {
+          id = 29,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 530,
+          y = 318,
+          width = 24,
+          height = 24,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "krisroom.stain"
           }
         }
       }
