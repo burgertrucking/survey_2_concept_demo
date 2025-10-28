@@ -12,6 +12,7 @@ return {
   nextlayerid = 6,
   nextobjectid = 14,
   properties = {
+    ["music"] = "carpet_instrumental",
     ["name"] = "Test Map - Room 2"
   },
   tilesets = {

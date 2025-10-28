@@ -13,7 +13,8 @@ return {
   nextobjectid = 47,
   properties = {
     ["light"] = true,
-    ["name"] = "The \"\"\"Light World\"\"\""
+    ["music"] = "carpet_instrumental",
+    ["name"] = "Test Map - The \"\"\"Light World\"\"\""
   },
   tilesets = {
     {

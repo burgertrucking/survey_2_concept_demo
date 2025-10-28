@@ -12,7 +12,7 @@ return {
   nextlayerid = 6,
   nextobjectid = 42,
   properties = {
-    ["music"] = "mod_menu",
+    ["music"] = "carpet_instrumental",
     ["name"] = "Test Map - Room 1"
   },
   tilesets = {
@@ -457,8 +457,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["text1"] = "* Silence echoes in the darkness\nof this familiar-yet-different\nscenery.",
-            ["text2"] = "* The power of avoiding copying\nofficial music shines within\nyou."
+            ["text1"] = "* You observe your surroundings and deduce that you are, indeed, in the house.",
+            ["text2"] = "* The power of carpet shines within you."
           }
         },
         {

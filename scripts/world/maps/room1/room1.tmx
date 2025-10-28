@@ -4,7 +4,7 @@
   <export target="data.lua" format="lua"/>
  </editorsettings>
  <properties>
-  <property name="music" value="mod_menu"/>
+  <property name="music" value="carpet_instrumental"/>
   <property name="name" value="Test Map - Room 1"/>
  </properties>
  <tileset firstgid="1" source="../../tilesets/castle.tsx"/>
@@ -99,12 +99,8 @@ off...</property>
   </object>
   <object id="27" name="savepoint" x="174" y="160" width="40" height="40">
    <properties>
-    <property name="text1">* Silence echoes in the darkness
-of this familiar-yet-different
-scenery.</property>
-    <property name="text2">* The power of avoiding copying
-official music shines within
-you.</property>
+    <property name="text1" value="* You observe your surroundings and deduce that you are, indeed, in the house."/>
+    <property name="text2" value="* The power of carpet shines within you."/>
    </properties>
   </object>
   <object id="28" name="squeak" x="680" y="600" width="40" height="40"/>
