@@ -17,4 +17,12 @@ function AngryDummy:init()
     self:addEnemy("angrydummy")
 end
 
+--- Testing victory text replacement
+---@param text  string      Current victory text
+---@param money integer     Money earned on victory
+---@param xp    integer     XP earned on victory
+function AngryDummy:getVictoryText(text, money, xp)
+    return "* You won!\n* Got " .. money .. " "..Game:getConfig("darkCurrencyShort")..".\n* But was that even worth it?"
+end
+
 return AngryDummy
