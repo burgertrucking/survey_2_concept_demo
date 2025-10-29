@@ -40,8 +40,8 @@
  <objectgroup color="#ff00ff" id="4" name="objects">
   <object id="10" name="transition" x="310" y="460" width="40" height="40">
    <properties>
-    <property name="map" value="room3"/>
-    <property name="marker" value="entryB"/>
+    <property name="map" value="krishallway"/>
+    <property name="marker" value="entryA"/>
    </properties>
   </object>
   <object id="16" name="interactable" x="202" y="198" width="56" height="40">
@@ -109,7 +109,7 @@
   <object id="2" name="spawn" x="325" y="295">
    <point/>
   </object>
-  <object id="11" name="entry" x="330" y="370">
+  <object id="11" name="entry" x="330.667" y="420">
    <point/>
   </object>
  </objectgroup>

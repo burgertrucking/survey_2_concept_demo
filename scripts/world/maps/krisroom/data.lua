@@ -253,8 +253,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "room3",
-            ["marker"] = "entryB"
+            ["map"] = "krishallway",
+            ["marker"] = "entryA"
           }
         },
         {
@@ -458,8 +458,8 @@ return {
           name = "entry",
           type = "",
           shape = "point",
-          x = 330,
-          y = 370,
+          x = 330.667,
+          y = 420,
           width = 0,
           height = 0,
           rotation = 0,

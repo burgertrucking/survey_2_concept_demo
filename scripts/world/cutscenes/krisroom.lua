@@ -38,7 +38,7 @@ return {
             elseif 20 < fun and fun <= 30 then
                 cutscene:text("* (...some kind of white, leathery sphere thing... oh, that's a baseball...)")
             elseif 30 < fun and fun <= 40 then
-                cutscene:text("* (...some unopened, plain-looking envelopes from several state universities...)")
+                cutscene:text("* (...a few unopened, plain-looking envelopes from state universities...)")
             else
                 cutscene:text("* (...an unopened can of Bepis...)")
             end
@@ -62,17 +62,17 @@ return {
 
     ---@param cutscene WorldCutscene
     redwagon = function(cutscene)
-        cutscene:text("* (A wagon with a bird cage in it.)")
+        cutscene:text("* (It's a wagon with a bird cage in it.)")
         cutscene:text("* (It's almost as if it looks more damaged every time you see it.)")
     end,
 
     stain = function(cutscene)
-        cutscene:text("* (The stain refuses to come off.)")
+        cutscene:text("* (The stain never goes away, no matter how hard you try to clean it.)")
     end,
 
     ---@param cutscene WorldCutscene
     window = function(cutscene)
         cutscene:text("* (The morning sun shines vividly.)")
-        cutscene:text("* (Rays of its light permeate every corner of your room.)")
+        cutscene:text("* (Rays of its light permeate into every corner of your room.)")
     end,
 }
