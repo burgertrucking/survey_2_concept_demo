@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 26,
+  nextobjectid = 27,
   properties = {
     ["light"] = true
   },
@@ -18,8 +18,7 @@ return {
     {
       name = "krishallway",
       firstgid = 1,
-      filename = "../../tilesets/krishallway.tsx",
-      exportfilename = "../../tilesets/krishallway.lua"
+      filename = "../../tilesets/krishallway.tsx"
     }
   },
   layers = {
@@ -30,7 +29,7 @@ return {
       width = 27,
       height = 12,
       id = 1,
-      name = "Tile Layer 1",
+      name = "background",
       class = "",
       visible = true,
       opacity = 1,
@@ -290,8 +289,9 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "room3",
-            ["marker"] = "entryB"
+            ["facing"] = "down",
+            ["map"] = "torhouse",
+            ["marker"] = "entryA"
           }
         },
         {
@@ -358,6 +358,19 @@ return {
           shape = "point",
           x = 598.525,
           y = 296.115,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 26,
+          name = "entryB",
+          type = "",
+          shape = "point",
+          x = 871,
+          y = 277,
           width = 0,
           height = 0,
           rotation = 0,
