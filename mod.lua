@@ -26,11 +26,16 @@ function Mod:load(savedata, cleansave, fileslot)
         if Game:getFlag("fun") == 6 then Mod:renameChara("kris", "Kris") end
         if Game:getFlag("unfun") == 6 then Mod:renameChara("susie", "Susie") end
     end
-    Mod:registerTestCalls() -- DEBUG
+
+    Game.world:registerCall("Call Home", "calls.home")
+    -- Mod:registerTestCalls() -- DEBUG
 end
 
 function Mod:postInit(cleansave)
     env.print("Called Mod:postInit()")
+    if cleansave then
+        Game.world:startCutscene("opening")
+    end
 end
 
 

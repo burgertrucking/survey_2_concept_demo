@@ -8,6 +8,14 @@ local function outro(cutscene)
 end
 
 return {
+    home = function(cutscene)
+        -- STUB
+        intro(cutscene)
+        cutscene:text("* (You hear the phone ringing downstairs.)")
+        cutscene:text("* (Seems like nobody is going to pick it up.)")
+        outro(cutscene)
+    end,
+    
     ---@param cutscene WorldCutscene
     test1 = function(cutscene)
         intro(cutscene)
@@ -62,5 +70,5 @@ return {
         else
             cutscene:text("* (But nobody came.)")
         end
-    end
+    end,
 }
