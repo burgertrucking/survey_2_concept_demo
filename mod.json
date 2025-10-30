@@ -17,7 +17,7 @@
     "chapter": 1,
 
     // The map that you start in when first starting the mod.
-    "map": "room3",
+    "map": "krisroom",
 
     // The party. The first character is the player.
     "party": ["kris"],
@@ -72,7 +72,7 @@
             // Reduces the amount of available weapons and armor slots in the inventory
             "lessEquipments": false,
             // Whether X-Actions appear in spell menu by default
-            "partyActions": false,
+            "partyActions": true,
             // Stat increases after defeating an enemy with violence
             "growStronger": true,
             // The character who grows stronger if they're in the party

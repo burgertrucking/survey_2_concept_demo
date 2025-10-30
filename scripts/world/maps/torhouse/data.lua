@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 35,
+  nextobjectid = 54,
   properties = {
     ["light"] = true
   },
@@ -476,8 +476,8 @@ return {
           visible = true,
           properties = {
             ["facing"] = "down",
-            ["map"] = "torhouse",
-            ["marker"] = "entryB"
+            ["map"] = "room3",
+            ["marker"] = "entry"
           }
         },
         {
@@ -494,6 +494,203 @@ return {
           properties = {
             ["map"] = "torhouse",
             ["marker"] = "entryB"
+          }
+        },
+        {
+          id = 40,
+          name = "npc",
+          type = "",
+          shape = "point",
+          x = 885,
+          y = 303.5,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "starwalker",
+            ["text1"] = "* This [color:yellow]lack of Chairiel[color:reset] is    [color:yellow]Pissing[color:reset] me off...",
+            ["text2"] = "* I'm the original      [color:yellow]Starwalker"
+          }
+        },
+        {
+          id = 42,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 400,
+          y = 256,
+          width = 56,
+          height = 48,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.fridge"
+          }
+        },
+        {
+          id = 43,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 464,
+          y = 232,
+          width = 64,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.sink"
+          }
+        },
+        {
+          id = 52,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 412,
+          y = 384,
+          width = 320,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.diningtable"
+          }
+        },
+        {
+          id = 53,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 860,
+          y = 386,
+          width = 280,
+          height = 20,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.couch"
+          }
+        },
+        {
+          id = 44,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 544,
+          y = 232,
+          width = 56,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.stove"
+          }
+        },
+        {
+          id = 45,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 624,
+          y = 232,
+          width = 59,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.microwave"
+          }
+        },
+        {
+          id = 46,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 688,
+          y = 272,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.trash"
+          }
+        },
+        {
+          id = 47,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 752,
+          y = 280,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.phone"
+          }
+        },
+        {
+          id = 50,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 1040,
+          y = 265,
+          width = 30,
+          height = 30,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.watersausage"
+          }
+        },
+        {
+          id = 51,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 1154,
+          y = 378,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.book"
+          }
+        },
+        {
+          id = 48,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 960,
+          y = 264.5,
+          width = 64,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.tvtime"
+          }
+        },
+        {
+          id = 49,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 1080,
+          y = 268.5,
+          width = 60,
+          height = 50,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.lesserchairiel"
           }
         }
       }
@@ -545,6 +742,19 @@ return {
           shape = "point",
           x = 255.5,
           y = 350,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 37,
+          name = "entryC",
+          type = "",
+          shape = "point",
+          x = 1150,
+          y = 340,
           width = 0,
           height = 0,
           rotation = 0,
