@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="35" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="54">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="35" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="55">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -94,15 +94,13 @@
   </object>
   <object id="11" name="transition" x="168" y="336" width="40" height="40">
    <properties>
-    <property name="map" value="torhouse"/>
-    <property name="marker" value="entryB"/>
+    <property name="map" value="torbathroom"/>
+    <property name="marker" value="spawn"/>
    </properties>
   </object>
-  <object id="40" name="npc" x="885" y="303.5">
+  <object id="40" name="sprite" x="844" y="212">
    <properties>
-    <property name="actor" value="starwalker"/>
-    <property name="text1" value="* This [color:yellow]lack of Chairiel[color:reset] is    [color:yellow]Pissing[color:reset] me off..."/>
-    <property name="text2" value="* I'm the original      [color:yellow]Starwalker"/>
+    <property name="texture" value="world/torhouse/chairiel_empty"/>
    </properties>
    <point/>
   </object>
@@ -164,6 +162,12 @@
   <object id="49" name="interactable" x="1080" y="268.5" width="60" height="50">
    <properties>
     <property name="cutscene" value="torhouse.lesserchairiel"/>
+   </properties>
+  </object>
+  <object id="54" name="interactable" x="850" y="264" width="72" height="40">
+   <properties>
+    <property name="cutscene" value="torhouse.chairiel"/>
+    <property name="solid" type="bool" value="true"/>
    </properties>
   </object>
  </objectgroup>

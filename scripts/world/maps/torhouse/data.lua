@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 54,
+  nextobjectid = 55,
   properties = {
     ["light"] = true
   },
@@ -492,25 +492,23 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "torhouse",
-            ["marker"] = "entryB"
+            ["map"] = "torbathroom",
+            ["marker"] = "spawn"
           }
         },
         {
           id = 40,
-          name = "npc",
+          name = "sprite",
           type = "",
           shape = "point",
-          x = 885,
-          y = 303.5,
+          x = 844,
+          y = 212,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           properties = {
-            ["actor"] = "starwalker",
-            ["text1"] = "* This [color:yellow]lack of Chairiel[color:reset] is    [color:yellow]Pissing[color:reset] me off...",
-            ["text2"] = "* I'm the original      [color:yellow]Starwalker"
+            ["texture"] = "world/torhouse/chairiel_empty"
           }
         },
         {
@@ -691,6 +689,22 @@ return {
           visible = true,
           properties = {
             ["cutscene"] = "torhouse.lesserchairiel"
+          }
+        },
+        {
+          id = 54,
+          name = "interactable",
+          type = "",
+          shape = "rectangle",
+          x = 850,
+          y = 264,
+          width = 72,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["cutscene"] = "torhouse.chairiel",
+            ["solid"] = true
           }
         }
       }
