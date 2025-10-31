@@ -476,8 +476,8 @@ return {
           visible = true,
           properties = {
             ["facing"] = "down",
-            ["map"] = "room3",
-            ["marker"] = "entry"
+            ["map"] = "town_krisyard",
+            ["marker"] = "entryA"
           }
         },
         {

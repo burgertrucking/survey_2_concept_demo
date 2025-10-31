@@ -88,8 +88,8 @@
   <object id="29" name="transition" x="1188" y="298" width="40" height="40">
    <properties>
     <property name="facing" value="down"/>
-    <property name="map" value="room3"/>
-    <property name="marker" value="entry"/>
+    <property name="map" value="town_krisyard"/>
+    <property name="marker" value="entryA"/>
    </properties>
   </object>
   <object id="11" name="transition" x="168" y="336" width="40" height="40">
