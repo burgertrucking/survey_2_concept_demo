@@ -34,6 +34,8 @@ end
 function Mod:postInit(cleansave)
     env.print("Called Mod:postInit()")
     if cleansave then
+        Game:setBorder("none")
+        Game.world:loadMap("krisroom", "spawn_intro", "left")
         Game.world:startCutscene("opening")
     end
 end

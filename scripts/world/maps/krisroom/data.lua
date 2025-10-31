@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 30,
+  nextobjectid = 32,
   properties = {
     ["light"] = true
   },
@@ -447,6 +447,19 @@ return {
           shape = "point",
           x = 325,
           y = 295,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 30,
+          name = "spawn_intro",
+          type = "",
+          shape = "point",
+          x = 512,
+          y = 265,
           width = 0,
           height = 0,
           rotation = 0,
