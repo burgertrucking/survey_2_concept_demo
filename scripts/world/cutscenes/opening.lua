@@ -1,33 +1,34 @@
 --- @param cutscene Cutscene
 return function(cutscene)
-    -- STUB
-    Kristal.Console.env.print("testing cutscene")
-    cutscene:playSound("oof")
+    cutscene:fadeOut(0)
+    Game.world:transitionMusic({ "drone", 0.5, 0.5 })
+    cutscene:wait(0.5)
 
-    -- Everything below onwards is kanged directly from the Kristal testmod
-    local function centerText(str)
+    -- based on testmod centerText in testing.this_is_a_test_mod
+    --- @param voice? string Filename in `assets/sound/voice`, leaving blank defaults to no typer sound
+    local function writeText(str, voice)
         local text = DialogueText(str, 0, 16, 640, 480,
                                   { align = "center" })
+        text.state.typing_sound = voice
         text.layer = WORLD_LAYERS["top"] + 100
         text.parallax_x = 0
         text.parallax_y = 0
         Game.world:addChild(text)
 
         text.advance_callback = function ()
-            Game.world.timer:tween(1, text, { alpha = 0 }, "linear", function ()
                 text:remove()
-            end)
         end
 
         cutscene:wait(function () return text:isRemoved() end)
     end
 
-    cutscene:fadeOut(0)
-
-    centerText(
-        "Hello.[wait:10]\n\n" ..
-        "I gotta replace this at some point.")
+    writeText("I gotta replace this at some point.", "susie")
+    writeText("Here's another string.", "noelle")
+    writeText("Calling the same function...", "ralsei")
+    writeText("Y'know, I often misspell function as fuction.", "default")
+    writeText("I also misspell misspell as mispell.")
 
     cutscene:fadeIn(0)
+    Game.world.music:stop()
 
 end
