@@ -11,6 +11,7 @@ function actor:init()
     self.height = 53
 
     -- Hitbox for this actor in the overworld (optional, uses width and height by default)
+    -- NOTE these are eyeballed and not accurate
     self.hitbox = {0, 30, 25, 23}
 
     -- Path to this actor's sprites (defaults to "")

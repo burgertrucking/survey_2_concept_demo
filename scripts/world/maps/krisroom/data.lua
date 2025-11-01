@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 5,
-  nextobjectid = 32,
+  nextlayerid = 6,
+  nextobjectid = 36,
   properties = {
     ["light"] = true
   },

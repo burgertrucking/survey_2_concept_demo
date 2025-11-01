@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="34">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="36">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -115,11 +115,11 @@
    </properties>
    <point/>
   </object>
-  <object id="33" name="script" x="316" y="656">
+  <object id="35" name="script" x="317.333" y="657.333">
    <properties>
     <property name="cutscene" value="town_krisyard.dirtyhacker"/>
    </properties>
-   <polygon points="0,0 -342,-4 -342,-702 -410,-694 -398,68 386,54 384,-716 328,-714 330,8"/>
+   <polygon points="0,0 -342.667,-4 -336,-524 325.333,-517.333 326.667,8 12,1.33333 13.3333,53.3333 377.333,56 380,-552 -386.667,-557.333 -385.333,62.6667 5.33333,52"/>
   </object>
  </objectgroup>
  <objectgroup color="#7f00ff" id="3" name="markers">

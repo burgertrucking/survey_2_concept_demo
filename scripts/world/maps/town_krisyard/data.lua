@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 34,
+  nextobjectid = 36,
   properties = {
     ["light"] = true
   },
@@ -474,26 +474,29 @@ return {
           }
         },
         {
-          id = 33,
+          id = 35,
           name = "script",
           type = "",
           shape = "polygon",
-          x = 316,
-          y = 656,
+          x = 317.333,
+          y = 657.333,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           polygon = {
             { x = 0, y = 0 },
-            { x = -342, y = -4 },
-            { x = -342, y = -702 },
-            { x = -410, y = -694 },
-            { x = -398, y = 68 },
-            { x = 386, y = 54 },
-            { x = 384, y = -716 },
-            { x = 328, y = -714 },
-            { x = 330, y = 8 }
+            { x = -342.667, y = -4 },
+            { x = -336, y = -524 },
+            { x = 325.333, y = -517.333 },
+            { x = 326.667, y = 8 },
+            { x = 12, y = 1.33333 },
+            { x = 13.3333, y = 53.3333 },
+            { x = 377.333, y = 56 },
+            { x = 380, y = -552 },
+            { x = -386.667, y = -557.333 },
+            { x = -385.333, y = 62.6667 },
+            { x = 5.33333, y = 52 }
           },
           properties = {
             ["cutscene"] = "town_krisyard.dirtyhacker"
