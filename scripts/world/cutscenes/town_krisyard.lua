@@ -1,14 +1,15 @@
 return {
     carnote = function(cutscene, event)
         if not event:getFlag("used_once") then
-            cutscene:text("* Though barely noticeable, the car's tires sink to the ground. A deep gash is carved into each.")
-            cutscene:text("* Attached to the windshield is a note, reading:")
+            cutscene:text("* (Though subtle, the car's tires sink to the ground. A deep gash is carved into each.)")
+            cutscene:text("* (Attached to the windshield is a note, reading:)")
+            cutscene:text("\"This is all of the demo I could finish in time for Halloween. Sorry for the lack of content.")
+            cutscene:text("I aim complete the prologue over the next month, and I'll upload a build or two per week.")
+            cutscene:text("Hopefully, it won't take too long...")
+            cutscene:text("Until then, feel free to poke around with the debug menu or peruse the source code.")
+            cutscene:text("You just might find something interesting...\"")
         end
-        cutscene:text("\"This is all of the demo I could finish in time for Halloween. Sorry for the lack of content.")
-        cutscene:text("I aim complete the prologue over the next month, and I'll upload a build or two per week.")
-        cutscene:text("Hopefully it won't take too long...")
-        cutscene:text("Until then, feel free to poke around with the debug menu or peruse the source code.")
-        cutscene:text("You just might find something interesting...\"")
+        cutscene:text("* (Mom was right.)\n* (What the hell did any of that even mean?)")
     end,
 
     dirtyhacker = function(cutscene)

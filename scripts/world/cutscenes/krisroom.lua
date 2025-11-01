@@ -6,8 +6,8 @@ return {
 
     ---@param cutscene WorldCutscene
     ---@param event Event
-    asrieldesk = function(cutscene, event)
-        if not event:getFlag("used_once") then
+    asrieldesk = function(cutscene, interactable)
+        if interactable.interact_count <= 1 then
             cutscene:text("* (You left the computer on overnight.)")
             local unfun = Game:getFlag("unfun", 0)
             if 0 < unfun and unfun <= 20 then

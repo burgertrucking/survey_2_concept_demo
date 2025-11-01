@@ -12,7 +12,8 @@ return {
   nextlayerid = 9,
   nextobjectid = 36,
   properties = {
-    ["light"] = true
+    ["light"] = true,
+    ["music"] = "birdnoise"
   },
   tilesets = {
     {
