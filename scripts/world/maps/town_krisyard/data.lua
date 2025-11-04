@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 9,
-  nextobjectid = 36,
+  nextobjectid = 38,
   properties = {
     ["light"] = true,
     ["music"] = "birdnoise"
@@ -431,76 +431,46 @@ return {
           name = "npc",
           type = "",
           shape = "point",
-          x = 255,
-          y = 598,
+          x = 474,
+          y = 480,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           properties = {
             ["actor"] = "toriel",
-            ["cutscene"] = "town_krisyard.torcarbroke",
-            ["facing"] = "right"
+            ["facing"] = "left",
+            ["text1"] = "* Hi Kris"
           }
         },
         {
-          id = 29,
-          name = "interactable",
-          type = "",
-          shape = "rectangle",
-          x = 283.333,
-          y = 519,
-          width = 155.667,
-          height = 122,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["cutscene"] = "town_krisyard.carnote",
-            ["solid"] = true
-          }
-        },
-        {
-          id = 30,
-          name = "sprite",
+          id = 36,
+          name = "npc",
           type = "",
           shape = "point",
-          x = 280,
-          y = 482.667,
+          x = 540,
+          y = 370,
           width = 0,
           height = 0,
           rotation = 0,
           visible = true,
           properties = {
-            ["texture"] = "world/town_krisyard/torcar/torcar"
+            ["actor"] = "torcar"
           }
         },
         {
-          id = 35,
+          id = 37,
           name = "script",
           type = "",
-          shape = "polygon",
-          x = 317.333,
-          y = 657.333,
-          width = 0,
-          height = 0,
+          shape = "rectangle",
+          x = 300,
+          y = 390,
+          width = 80,
+          height = 80,
           rotation = 0,
           visible = true,
-          polygon = {
-            { x = 0, y = 0 },
-            { x = -342.667, y = -4 },
-            { x = -336, y = -524 },
-            { x = 325.333, y = -517.333 },
-            { x = 326.667, y = 8 },
-            { x = 12, y = 1.33333 },
-            { x = 13.3333, y = 53.3333 },
-            { x = 377.333, y = 56 },
-            { x = 380, y = -552 },
-            { x = -386.667, y = -557.333 },
-            { x = -385.333, y = 62.6667 },
-            { x = 5.33333, y = 52 }
-          },
           properties = {
-            ["cutscene"] = "town_krisyard.dirtyhacker"
+            ["cutscene"] = "town_krisyard.introdrive"
           }
         }
       }

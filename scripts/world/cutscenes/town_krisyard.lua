@@ -1,51 +1,52 @@
 return {
-    carnote = function(cutscene, event)
-        if not event:getFlag("used_once") then
-            cutscene:text("* (Though subtle, the car's tires sink to the ground. A deep gash is carved into each.)")
-            cutscene:text("* (Attached to the windshield is a note, reading:)")
-            cutscene:text("\"This is all of the demo I could finish in time for Halloween. Sorry for the lack of content.")
-            cutscene:text("I aim complete the prologue over the next month, and I'll upload a build or two per week.")
-            cutscene:text("Hopefully, it won't take too long...")
-            cutscene:text("Until then, feel free to poke around with the debug menu or peruse the source code.")
-            cutscene:text("You just might find something interesting...\"")
-        end
-        cutscene:text("* (Mom was right.)\n* (What the hell did any of that even mean?)")
-    end,
-
-    dirtyhacker = function(cutscene)
+    introdrive = function(cutscene)
+        local kris = Game.world.player
         local toriel = cutscene:getCharacter("toriel")
+        cutscene:wait(cutscene:walkToSpeed(kris, 322, 480, 5))
+        cutscene:wait(cutscene:walkToSpeed(kris, 430, 480, 5))
+        cutscene:wait(0.25)
         cutscene:setSpeaker(toriel)
-        cutscene:look(toriel, "down")
-        cutscene:text("* Oh![wait:5] " .. Game:getPartyMember("kris"):getName() .. "!", "smile")
-        cutscene:text("* Are you going to noclip your way to school?\n* What a wonderful idea!", "grin")
-        cutscene:text("* Though, it seems the rest of town vanished from existence...", "lookright")
-        cutscene:text("* Perhaps that tire slasher might be on to something...", "lookright")
-        cutscene:look(toriel, "right")
-    end,
+        cutscene:text("* Ah,[wait:5] there you are!", "smile")
+        cutscene:text("* We may still be able to make it![wait:5] Let us hurry!", "smile")
 
-    torcarbroke = function(cutscene, character)
-        local toriel = cutscene:getCharacter("toriel")
-        cutscene:setSpeaker(toriel)
-        if not character:getFlag("used_once") then
-            cutscene:text("* Hm...", "sad")
-            toriel:facePlayer()
-            cutscene:text("* ...Ah![wait:5] " .. Game:getPartyMember("kris"):getName() .. "!", "smile")
-            cutscene:text("* As I pulled out of the driveway,[wait:5] all the tires suddenly went flat...", "lookright")
-            cutscene:text("* Upon closer inspection,[wait:5] I discovered...", "lookright")
-            cutscene:text("* Well,[wait:5] I do not wish to alarm you,[wait:5] but...", "sad")
-            cutscene:text("* It seems some vandal has [color:red]slashed[color:reset] the car's tires.", "sad")
-            cutscene:text("* This hooligan apparently also left some sort of ransom note...", "sad")
-            cutscene:text("* But,[wait:5] it hardly makes any sense.", "annoyed")
-            cutscene:text("* It went on about some kind of game demo,[wait:5] and about taking too long...", "annoyed")
-            cutscene:text("* Please do not be too concerned.", "smile")
-            cutscene:text("* I would merely dismiss this event as the doings of a lunatic.", "smile")
-            cutscene:look(toriel, "right")
-            character:setFlag("used_once", true)
-        else
-            toriel:facePlayer()
-            cutscene:text("* I do not think we will be able to get to school like this.", "lookright")
-            cutscene:text("* Until this no longer poses a problem,[wait:10] we just have to wait.", "grin")
-            cutscene:look(toriel, "right")
-        end
+        -- TODO toriel should have her dialogue as they're walking here, not fully in the car
+        cutscene:walkToSpeed(kris, 500, 480)
+        cutscene:wait(cutscene:walkToSpeed(toriel, 580, 480))
+        cutscene:walkToSpeed(kris, 500, 380)
+        cutscene:wait(cutscene:walkToSpeed(toriel, 580, 380))
+        -- HACK make player and toriel invisible
+        cutscene:setSprite(kris, "")
+        cutscene:setSprite(toriel, "")
+        cutscene:detachCamera()
+        cutscene:panToSpeed(541, 280)
+        cutscene:setTextboxTop(true)
+
+        cutscene:wait(1)
+        local car = cutscene:getCharacter("torcar")
+        cutscene:setAnimation(car, "idle")
+        Game.world:transitionMusic("introcar")
+        local txtopts = { ["skip"] = false, ["advance"] = false }
+        cutscene:text("* " .. Game:getPartyMember("kris"):getName() .. "...[wait:5] It's a beautiful day outside,[wait:5] is it not?", txtopts)
+        cutscene:wait(4.5)
+        cutscene:text("* On days like these,[wait:5] you and Asriel would play catch for hours.", txtopts)
+        cutscene:wait(4.5)
+        cutscene:text("* Just a few more days until he is back from college.", txtopts)
+        cutscene:wait(4.5)
+        cutscene:panToSpeed(541, 650, 3)
+        car:resetSprite()
+        car:walkToSpeed(541, 600, 4, "left", false, function()
+            car:walkToSpeed(340, 600, 4, "down", false, function()
+                car:walkToSpeed(340, 1000, 4)
+            end )
+        end )
+        cutscene:text("* I wonder how he must feel,[wait:5] returning to such a small,[wait:5] quaint town like this...", txtopts)
+        cutscene:wait(5)
+        cutscene:closeText()
+        cutscene:wait(2)
+        cutscene:after(function()
+            --STUB replace with loading next area map
+            cutscene:loadMap("room3")
+            Game.world:startCutscene("room3.starwalkerconvo")
+        end )
     end,
 }

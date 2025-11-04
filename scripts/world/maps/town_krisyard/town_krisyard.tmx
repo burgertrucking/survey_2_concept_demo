@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="36">
+<map version="1.11" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="16" height="21" tilewidth="40" tileheight="40" infinite="0" nextlayerid="9" nextobjectid="38">
  <editorsettings>
   <export target="data.lua" format="lua"/>
  </editorsettings>
@@ -96,31 +96,24 @@
     <property name="marker" value="entryC"/>
    </properties>
   </object>
-  <object id="28" name="npc" x="255" y="598">
+  <object id="28" name="npc" x="474" y="480">
    <properties>
     <property name="actor" value="toriel"/>
-    <property name="cutscene" value="town_krisyard.torcarbroke"/>
-    <property name="facing" value="right"/>
+    <property name="facing" value="left"/>
+    <property name="text1" value="* Hi Kris"/>
    </properties>
    <point/>
   </object>
-  <object id="29" name="interactable" x="283.333" y="519" width="155.667" height="122">
+  <object id="36" name="npc" x="540" y="370">
    <properties>
-    <property name="cutscene" value="town_krisyard.carnote"/>
-    <property name="solid" type="bool" value="true"/>
-   </properties>
-  </object>
-  <object id="30" name="sprite" x="280" y="482.667">
-   <properties>
-    <property name="texture" value="world/town_krisyard/torcar/torcar"/>
+    <property name="actor" value="torcar"/>
    </properties>
    <point/>
   </object>
-  <object id="35" name="script" x="317.333" y="657.333">
+  <object id="37" name="script" x="300" y="390" width="80" height="80">
    <properties>
-    <property name="cutscene" value="town_krisyard.dirtyhacker"/>
+    <property name="cutscene" value="town_krisyard.introdrive"/>
    </properties>
-   <polygon points="0,0 -342.667,-4 -336,-524 325.333,-517.333 326.667,8 12,1.33333 13.3333,53.3333 377.333,56 380,-552 -386.667,-557.333 -385.333,62.6667 5.33333,52"/>
   </object>
  </objectgroup>
  <objectgroup color="#7f00ff" id="3" name="markers">

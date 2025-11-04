@@ -114,7 +114,7 @@
     <property name="cutscene" value="torhouse.sink"/>
    </properties>
   </object>
-  <object id="52" name="interactable" x="412" y="384" width="320" height="40">
+  <object id="52" name="interactable" x="412" y="390" width="320" height="30">
    <properties>
     <property name="cutscene" value="torhouse.diningtable"/>
    </properties>
