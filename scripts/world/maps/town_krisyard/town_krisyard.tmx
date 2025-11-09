@@ -112,7 +112,7 @@
   </object>
   <object id="37" name="script" x="300" y="390" width="80" height="80">
    <properties>
-    <property name="cutscene" value="town_krisyard.introdrive"/>
+    <property name="cutscene" value="town_krisyard.introcar"/>
    </properties>
   </object>
  </objectgroup>

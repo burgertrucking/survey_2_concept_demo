@@ -470,7 +470,7 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["cutscene"] = "town_krisyard.introdrive"
+            ["cutscene"] = "town_krisyard.introcar"
           }
         }
       }

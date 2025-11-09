@@ -1,5 +1,5 @@
 return {
-    introdrive = function(cutscene)
+    introcar = function(cutscene)
         local kris = Game.world.player
         local toriel = cutscene:getCharacter("toriel")
         cutscene:wait(cutscene:walkToSpeed(kris, 322, 480, 5))
@@ -45,7 +45,7 @@ return {
         cutscene:wait(2)
         cutscene:after(function()
             cutscene:loadMap("town_residential", 0, 0)
-            Game.world:startCutscene("town_residential.introdrive2")
+            Game.world:startCutscene("town_residential.introcar2")
         end )
     end,
 }
