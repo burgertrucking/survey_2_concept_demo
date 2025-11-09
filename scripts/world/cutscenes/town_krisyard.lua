@@ -44,9 +44,8 @@ return {
         cutscene:closeText()
         cutscene:wait(2)
         cutscene:after(function()
-            --STUB replace with loading next area map
-            cutscene:loadMap("room3")
-            Game.world:startCutscene("room3.starwalkerconvo")
+            cutscene:loadMap("town_residential", 0, 0)
+            Game.world:startCutscene("town_residential.introdrive2")
         end )
     end,
 }
